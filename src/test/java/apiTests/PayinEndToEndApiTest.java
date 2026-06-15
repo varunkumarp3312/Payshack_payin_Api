@@ -38,13 +38,15 @@ public class PayinEndToEndApiTest {
     public void verifyPayinInitiateAndStatusCheckFlow() throws InterruptedException {
 
         String orderId = initiatePayinTransaction();
-        
-        
-        
         verifyPayinStatus(orderId);
+
+        
+       
         
        
     }
+
+    
 
     public String initiatePayinTransaction() {
 
@@ -159,7 +161,7 @@ public class PayinEndToEndApiTest {
    
 
     public void verifyPayinStatus(String orderId) throws InterruptedException{
-
+    	Thread.sleep(10000);
         JSONObject actualPayload = new JSONObject();
 
         actualPayload.put("orderId", orderId);
@@ -189,6 +191,7 @@ public class PayinEndToEndApiTest {
 
                 .when()
                     .post(statusEndpoint)
+                    
 
                 .then()
                     .log().all()
