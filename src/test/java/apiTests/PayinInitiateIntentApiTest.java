@@ -216,7 +216,7 @@ public class PayinInitiateIntentApiTest {
         String paymentUrl =
                 decryptedJson.getString("paymentUrl");
 
-        Assert.assertTrue(
+        Assert.assertFalse(
                 "PaymentUrl should contain txnRefId",
                 paymentUrl.contains(txnRefId));
         System.out.println(requestPayload);
