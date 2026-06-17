@@ -221,7 +221,126 @@ public class PayinInitiateIntentApiTest {
                 paymentUrl.contains(txnRefId));
         System.out.println(requestPayload);
     }
+    
+    @Test
+    public void verifyInitiatePayinTransactionWithAmountMoreThan10000() {
 
+        String orderId = CommonMethods.generateRandomOrderID();
+
+        JSONObject requestPayload =
+                buildInitiatePayloadWithAmount(orderId, "10001");
+
+        Response response =
+                sendInitiateRequest(requestPayload);
+
+        System.out.println("Request Payload for amount more than 10000 : "
+                + requestPayload);
+
+        System.out.println("Response Body for amount more than 10000 : "
+                + response.asString());
+
+        /*
+         * Expected: API should reject amount greater than 10000
+         * Update message/statusCode based on actual API response.
+         */
+
+        Assert.assertNotEquals(
+                "API should not allow amount more than 10000",
+                "Transaction Initiated Successfully",
+                response.jsonPath().getString("message"));
+
+        Assert.assertFalse(
+                "Success flag should be false for amount more than 10000",
+                response.jsonPath().getBoolean("success"));
+    }
+    
+    @Test
+    public void verifyInitiateWithInvalidEmailFormat() {
+
+        String orderId = CommonMethods.generateRandomOrderID();
+
+        JSONObject requestPayload =
+                buildInitiatePayloadWithEmailAndPhone(
+                        orderId,
+                        "pmkirru33gmail.com",
+                        "8970411423");
+
+        Response response =
+                sendInitiateRequest(requestPayload);
+
+        System.out.println("Invalid Email Response : " + response.asString());
+
+        Assert.assertFalse(
+                "Success flag should be false for invalid email",
+                response.jsonPath().getBoolean("success"));
+
+        Assert.assertTrue(
+                "Error message should contain email",
+                response.jsonPath().getString("message")
+                        .toLowerCase()
+                        .contains("email"));
+    }
+    
+    @Test
+    public void verifyInitiateWithPhoneMoreThan10Digits() {
+
+        String orderId = CommonMethods.generateRandomOrderID();
+
+        JSONObject requestPayload =
+                buildInitiatePayloadWithEmailAndPhone(
+                        orderId,
+                        "pmkirru33@gmail.com",
+                        "897041142312");
+
+        Response response =
+                sendInitiateRequest(requestPayload);
+
+        System.out.println("Phone More Than 10 Digits Response : "
+                + response.asString());
+
+        Assert.assertFalse(
+                "Success flag should be false for phone more than 10 digits",
+                response.jsonPath().getBoolean("success"));
+
+        Assert.assertTrue(
+                "Error message should contain phone",
+                response.jsonPath().getString("message")
+                        .toLowerCase()
+                        .contains("phone"));
+    }
+    
+    @Test
+    public void verifyInitiateWithPhoneNumberHavingCountryCode() {
+
+        String orderId = CommonMethods.generateRandomOrderID();
+
+        JSONObject requestPayload =
+                buildInitiatePayloadWithEmailAndPhone(
+                        orderId,
+                        "pmkirru33@gmail.com",
+                        "+918970411423");
+
+        Response response =
+                sendInitiateRequest(requestPayload);
+
+        System.out.println("Phone With Country Code Response : "
+                + response.asString());
+
+        Assert.assertFalse(
+                "Success flag should be false for phone with +91 country code",
+                response.jsonPath().getBoolean("success"));
+
+        Assert.assertTrue(
+                "Error message should contain phone",
+                response.jsonPath().getString("message")
+                        .toLowerCase()
+                        .contains("phone"));
+    }
+    
+    
+    
+    
+    
     public JSONObject buildInitiatePayload(String orderId) {
 
         JSONObject actualPayload = new JSONObject();
@@ -349,6 +468,45 @@ public class PayinInitiateIntentApiTest {
 
         return decryptedJson;
     }
+    
+    public JSONObject buildInitiatePayloadWithAmount(
+            String orderId,
+            String amount) {
+
+        JSONObject actualPayload = new JSONObject();
+
+        actualPayload.put("orderId", orderId);
+        actualPayload.put("amount", amount);
+        actualPayload.put("firstName", "pavan");
+        actualPayload.put("lastName", "kumar");
+        actualPayload.put("email", "pmkirru33@gmail.com");
+        actualPayload.put("phone", "8970411423");
+        actualPayload.put("userIP", "10.210.10");
+        actualPayload.put("userId", "dddd");
+
+        return actualPayload;
+    }
+    
+    public JSONObject buildInitiatePayloadWithEmailAndPhone(
+            String orderId,
+            String email,
+            String phone) {
+
+        JSONObject actualPayload = new JSONObject();
+
+        actualPayload.put("orderId", orderId);
+        actualPayload.put("amount", "100");
+        actualPayload.put("firstName", "pavan");
+        actualPayload.put("lastName", "kumar");
+        actualPayload.put("email", email);
+        actualPayload.put("phone", phone);
+        actualPayload.put("userIP", "10.210.10");
+        actualPayload.put("userId", "dddd");
+
+        return actualPayload;
+    }
+    
+    
 }
 
 
@@ -364,3 +522,4 @@ public class PayinInitiateIntentApiTest {
 //PaymentUrl validation
 //UPI URL validation
 //TxnRefId inside payment URL validation
+//initiate the api above 10K INR

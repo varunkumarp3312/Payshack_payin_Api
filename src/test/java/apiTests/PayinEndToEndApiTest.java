@@ -159,306 +159,307 @@ public class PayinEndToEndApiTest {
         return TestDataStore.orderId;
     }
    
-    
-    public void verifyPayinStatus(String orderId) throws InterruptedException {
-
-        int maxDurationInSeconds = 180; // 3 minutes
-        int intervalInSeconds = 30;     // 30 seconds
-        int maxAttempts = maxDurationInSeconds / intervalInSeconds;
-
-        String finalStatus = "";
-
-        for (int attempt = 1; attempt <= maxAttempts; attempt++) {
-
-            System.out.println("Status check attempt : " + attempt);
-
-            JSONObject actualPayload = new JSONObject();
-            actualPayload.put("orderId", orderId);
-
-            String encryptedBody =
-                    EncryptionUtil.encrypt(
-                            actualPayload.toString(),
-                            encryptionKey);
-
-            String checksum =
-                    EncryptionUtil.getChecksum(
-                            encryptedBody,
-                            encryptionKey);
-
-            JSONObject finalRequest = new JSONObject();
-            finalRequest.put("checksum", checksum);
-            finalRequest.put("encryptedBody", encryptedBody);
-
-            Response response =
-                    given()
-                        .baseUri(baseUrl)
-                        .header("secret-key", secretKey)
-                        .header("client-id", clientId)
-                        .header("Content-Type", "application/json")
-                        .body(finalRequest.toString())
-                        .log().all()
-
-                    .when()
-                        .post(statusEndpoint)
-
-                    .then()
-                        .log().all()
-                        .extract()
-                        .response();
-
-            Assert.assertEquals(200, response.statusCode());
-
-            JSONObject responseJson =
-                    new JSONObject(response.asString());
-
-            Assert.assertEquals(200, responseJson.getInt("statusCode"));
-            Assert.assertEquals("OK", responseJson.getString("status"));
-            Assert.assertTrue(responseJson.getBoolean("success"));
-
-            Assert.assertTrue(
-                    "Response data field is missing",
-                    responseJson.has("data"));
-
-            String decryptedStatusResponse =
-                    DecryptUtil.decrypt(
-                            responseJson.getString("data"),
-                            encryptionKey);
-
-            System.out.println("Status Decrypted Response is : " + decryptedStatusResponse);
-
-            JSONObject dataJson =
-                    new JSONObject(decryptedStatusResponse);
-
-            Set<String> expectedDataKeys =
-                    new HashSet<String>(
-                            Arrays.asList(
-                                    "status",
-                                    "txnRefId",
-                                    "utr",
-                                    "orderId",
-                                    "amount"));
-
-            Assert.assertEquals(
-                    "Extra or missing fields found in status data response",
-                    expectedDataKeys,
-                    dataJson.keySet());
-
-            Set<String> allowedStatuses =
-                    new HashSet<String>(
-                            Arrays.asList(
-                                    "INITIATED",
-                                    "SUCCESS",
-                                    "FAILED",
-                                    "PENDING",
-                                    "TAMPERED",
-                                    "DUPLICATE",
-                                    "EXPIRED",
-                                    "REFUNDED",
-                                    "TRANSACTION IN PROCESS",
-                                    "INCOMPLETE",
-                                    "HOLD"));
-
-            String actualStatus =
-                    dataJson.getString("status");
-
-            Assert.assertTrue(
-                    "Invalid transaction status : " + actualStatus,
-                    allowedStatuses.contains(actualStatus));
-
-            Assert.assertEquals(
-                    "OrderId mismatch in status response",
-                    orderId,
-                    dataJson.getString("orderId"));
-
-            Assert.assertNotNull(
-                    "txnRefId should not be null",
-                    dataJson.get("txnRefId"));
-
-            Assert.assertNotNull(
-                    "utr should not be null",
-                    dataJson.get("utr"));
-
-            Assert.assertNotNull(
-                    "amount should not be null",
-                    dataJson.get("amount"));
-
-            TestDataStore.transactionStatus = actualStatus;
-            TestDataStore.txnRefId = dataJson.getString("txnRefId");
-            TestDataStore.utr = dataJson.get("utr").toString();
-            TestDataStore.amount = dataJson.get("amount").toString();
-
-            System.out.println("Status OrderId : " + dataJson.getString("orderId"));
-            System.out.println("Status         : " + actualStatus);
-            System.out.println("TxnRefId       : " + dataJson.getString("txnRefId"));
-            System.out.println("UTR            : " + dataJson.get("utr"));
-            System.out.println("Amount         : " + dataJson.get("amount"));
-
-            finalStatus = actualStatus;
-
-            if (actualStatus.equalsIgnoreCase("SUCCESS")
-                    || actualStatus.equalsIgnoreCase("FAILED")) {
-
-                System.out.println("Final transaction status received : " + actualStatus);
-                break;
-            }
-
-            if (attempt < maxAttempts) {
-                System.out.println("Status is " + actualStatus
-                        + ". Waiting 30 seconds before next check...");
-                Thread.sleep(intervalInSeconds * 1000);
-            }
-        }
-
-        Assert.assertTrue(
-                "Transaction did not reach SUCCESS or FAILED within 3 minutes. Final status was : "
-                        + finalStatus,
-                finalStatus.equalsIgnoreCase("SUCCESS")
-                        || finalStatus.equalsIgnoreCase("FAILED"));
-    }
-    }
-
-//    public void verifyPayinStatus(String orderId) throws InterruptedException{
-//    	Thread.sleep(10000);
-//        JSONObject actualPayload = new JSONObject();
+    // every 30 sec interval
+//    public void verifyPayinStatus(String orderId) throws InterruptedException {
 //
-//        actualPayload.put("orderId", orderId);
+//        int maxDurationInSeconds = 180; // 3 minutes
+//        int intervalInSeconds = 30;     // 30 seconds
+//        int maxAttempts = maxDurationInSeconds / intervalInSeconds;
 //
-//        String encryptedBody =
-//                EncryptionUtil.encrypt(
-//                        actualPayload.toString(),
-//                        encryptionKey);
+//        String finalStatus = "";
 //
-//        String checksum =
-//                EncryptionUtil.getChecksum(
-//                        encryptedBody,
-//                        encryptionKey);
+//        for (int attempt = 1; attempt <= maxAttempts; attempt++) {
 //
-//        JSONObject finalRequest = new JSONObject();
+//            System.out.println("Status check attempt : " + attempt);
 //
-//        finalRequest.put("checksum", checksum);
-//        finalRequest.put("encryptedBody", encryptedBody);
-//        Response response =
-//                given()
-//                    .baseUri(baseUrl)
-//                    .header("secret-key", secretKey)
-//                    .header("client-id", clientId)
-//                    .header("Content-Type", "application/json")
-//                    .body(finalRequest.toString())
-//                    .log().all()
+//            JSONObject actualPayload = new JSONObject();
+//            actualPayload.put("orderId", orderId);
 //
-//                .when()
-//                    .post(statusEndpoint)
-//                    
+//            String encryptedBody =
+//                    EncryptionUtil.encrypt(
+//                            actualPayload.toString(),
+//                            encryptionKey);
 //
-//                .then()
-//                    .log().all()
-//                    .extract()
-//                    .response();
-//        
-//        
+//            String checksum =
+//                    EncryptionUtil.getChecksum(
+//                            encryptedBody,
+//                            encryptionKey);
 //
-//        Assert.assertEquals(200, response.statusCode());
+//            JSONObject finalRequest = new JSONObject();
+//            finalRequest.put("checksum", checksum);
+//            finalRequest.put("encryptedBody", encryptedBody);
 //
-//        JSONObject responseJson =
-//                new JSONObject(response.asString());
+//            Response response =
+//                    given()
+//                        .baseUri(baseUrl)
+//                        .header("secret-key", secretKey)
+//                        .header("client-id", clientId)
+//                        .header("Content-Type", "application/json")
+//                        .body(finalRequest.toString())
+//                        .log().all()
 //
-//        Assert.assertEquals(200, responseJson.getInt("statusCode"));
-//        Assert.assertEquals("OK", responseJson.getString("status"));
-//        Assert.assertTrue(responseJson.getBoolean("success"));
+//                    .when()
+//                        .post(statusEndpoint)
 //
-//        Assert.assertTrue(
-//                "Response data field is missing",
-//                responseJson.has("data"));
+//                    .then()
+//                        .log().all()
+//                        .extract()
+//                        .response();
 //
-//        Object dataObject =
-//                responseJson.get("data");
+//            Assert.assertEquals(200, response.statusCode());
 //
-//        JSONObject dataJson;
+//            JSONObject responseJson =
+//                    new JSONObject(response.asString());
 //
-//        if (dataObject instanceof JSONObject) {
-//            dataJson = responseJson.getJSONObject("data");
-//        } else {
+//            Assert.assertEquals(200, responseJson.getInt("statusCode"));
+//            Assert.assertEquals("OK", responseJson.getString("status"));
+//            Assert.assertTrue(responseJson.getBoolean("success"));
+//
+//            Assert.assertTrue(
+//                    "Response data field is missing",
+//                    responseJson.has("data"));
+//
 //            String decryptedStatusResponse =
 //                    DecryptUtil.decrypt(
 //                            responseJson.getString("data"),
 //                            encryptionKey);
 //
-//            System.out.println(
-//                    "Status Decrypted Response is : "
-//                            + decryptedStatusResponse);
+//            System.out.println("Status Decrypted Response is : " + decryptedStatusResponse);
 //
-//            dataJson =
+//            JSONObject dataJson =
 //                    new JSONObject(decryptedStatusResponse);
+//
+//            Set<String> expectedDataKeys =
+//                    new HashSet<String>(
+//                            Arrays.asList(
+//                                    "status",
+//                                    "txnRefId",
+//                                    "utr",
+//                                    "orderId",
+//                                    "amount"));
+//
+//            Assert.assertEquals(
+//                    "Extra or missing fields found in status data response",
+//                    expectedDataKeys,
+//                    dataJson.keySet());
+//
+//            Set<String> allowedStatuses =
+//                    new HashSet<String>(
+//                            Arrays.asList(
+//                                    "INITIATED",
+//                                    "SUCCESS",
+//                                    "FAILED",
+//                                    "PENDING",
+//                                    "TAMPERED",
+//                                    "DUPLICATE",
+//                                    "EXPIRED",
+//                                    "REFUNDED",
+//                                    "TRANSACTION IN PROCESS",
+//                                    "INCOMPLETE",
+//                                    "HOLD"));
+//
+//            String actualStatus =
+//                    dataJson.getString("status");
+//
+//            Assert.assertTrue(
+//                    "Invalid transaction status : " + actualStatus,
+//                    allowedStatuses.contains(actualStatus));
+//
+//            Assert.assertEquals(
+//                    "OrderId mismatch in status response",
+//                    orderId,
+//                    dataJson.getString("orderId"));
+//
+//            Assert.assertNotNull(
+//                    "txnRefId should not be null",
+//                    dataJson.get("txnRefId"));
+//
+//            Assert.assertNotNull(
+//                    "utr should not be null",
+//                    dataJson.get("utr"));
+//
+//            Assert.assertNotNull(
+//                    "amount should not be null",
+//                    dataJson.get("amount"));
+//
+//            TestDataStore.transactionStatus = actualStatus;
+//            TestDataStore.txnRefId = dataJson.getString("txnRefId");
+//            TestDataStore.utr = dataJson.get("utr").toString();
+//            TestDataStore.amount = dataJson.get("amount").toString();
+//
+//            System.out.println("Status OrderId : " + dataJson.getString("orderId"));
+//            System.out.println("Status         : " + actualStatus);
+//            System.out.println("TxnRefId       : " + dataJson.getString("txnRefId"));
+//            System.out.println("UTR            : " + dataJson.get("utr"));
+//            System.out.println("Amount         : " + dataJson.get("amount"));
+//
+//            finalStatus = actualStatus;
+//
+//            if (actualStatus.equalsIgnoreCase("SUCCESS")
+//                    || actualStatus.equalsIgnoreCase("FAILED")) {
+//
+//                System.out.println("Final transaction status received : " + actualStatus);
+//                break;
+//            }
+//
+//            if (attempt < maxAttempts) {
+//                System.out.println("Status is " + actualStatus
+//                        + ". Waiting 30 seconds before next check...");
+//                Thread.sleep(intervalInSeconds * 1000);
+//            }
 //        }
 //
-//        Set<String> expectedDataKeys =
-//                new HashSet<String>(
-//                        Arrays.asList(
-//                                "status",
-//                                "txnRefId",
-//                                "utr",
-//                                "orderId",
-//                                "amount"));
-//
-//        Assert.assertEquals(
-//                "Extra or missing fields found in status data response",
-//                expectedDataKeys,
-//                dataJson.keySet());
-//
-//        Set<String> allowedStatuses =
-//                new HashSet<String>(
-//                        Arrays.asList(
-//                                "INITIATED",
-//                                "SUCCESS",
-//                                "FAILED",
-//                                "PENDING",
-//                                "TAMPERED",
-//                                "DUPLICATE",
-//                                "EXPIRED",
-//                                "REFUNDED",
-//                                "TRANSACTION IN PROCESS",
-//                                "INCOMPLETE",
-//                                "HOLD"));
-//
-//        String actualStatus =
-//                dataJson.getString("status");
-//
 //        Assert.assertTrue(
-//                "Invalid transaction status : " + actualStatus,
-//                allowedStatuses.contains(actualStatus));
-//
-//        Assert.assertEquals(
-//                "OrderId mismatch in status response",
-//                orderId,
-//                dataJson.getString("orderId"));
-//
-//        Assert.assertNotNull(
-//                "txnRefId should not be null",
-//                dataJson.get("txnRefId"));
-//
-//        Assert.assertNotNull(
-//                "utr should not be null",
-//                dataJson.get("utr"));
-//
-//        Assert.assertNotNull(
-//                "amount should not be null",
-//                dataJson.get("amount"));
-//
-//        TestDataStore.transactionStatus =
-//                actualStatus;
-//
-//        TestDataStore.txnRefId =
-//                dataJson.getString("txnRefId");
-//
-//        TestDataStore.utr =
-//                dataJson.get("utr").toString();
-//
-//        TestDataStore.amount =
-//                dataJson.get("amount").toString();
-//
-//        System.out.println("Status OrderId : " + dataJson.getString("orderId"));
-//        System.out.println("Status         : " + actualStatus);
-//        System.out.println("TxnRefId       : " + dataJson.getString("txnRefId"));
-//        System.out.println("UTR            : " + dataJson.get("utr"));
-//        System.out.println("Amount         : " + dataJson.get("amount"));
+//                "Transaction did not reach SUCCESS or FAILED within 3 minutes. Final status was : "
+//                        + finalStatus,
+//                finalStatus.equalsIgnoreCase("SUCCESS")
+//                        || finalStatus.equalsIgnoreCase("FAILED"));
 //    }
+//    }
+//only one time status check performance
+    public void verifyPayinStatus(String orderId) throws InterruptedException{
+    	Thread.sleep(10000);
+        JSONObject actualPayload = new JSONObject();
+
+        actualPayload.put("orderId", orderId);
+
+        String encryptedBody =
+                EncryptionUtil.encrypt(
+                        actualPayload.toString(),
+                        encryptionKey);
+
+        String checksum =
+                EncryptionUtil.getChecksum(
+                        encryptedBody,
+                        encryptionKey);
+
+        JSONObject finalRequest = new JSONObject();
+
+        finalRequest.put("checksum", checksum);
+        finalRequest.put("encryptedBody", encryptedBody);
+        Response response =
+                given()
+                    .baseUri(baseUrl)
+                    .header("secret-key", secretKey)
+                    .header("client-id", clientId)
+                    .header("Content-Type", "application/json")
+                    .body(finalRequest.toString())
+                    .log().all()
+
+                .when()
+                    .post(statusEndpoint)
+                    
+
+                .then()
+                    .log().all()
+                    .extract()
+                    .response();
+        
+        
+
+        Assert.assertEquals(200, response.statusCode());
+
+        JSONObject responseJson =
+                new JSONObject(response.asString());
+
+        Assert.assertEquals(200, responseJson.getInt("statusCode"));
+        Assert.assertEquals("OK", responseJson.getString("status"));
+        Assert.assertTrue(responseJson.getBoolean("success"));
+
+        Assert.assertTrue(
+                "Response data field is missing",
+                responseJson.has("data"));
+
+        Object dataObject =
+                responseJson.get("data");
+
+        JSONObject dataJson;
+
+        if (dataObject instanceof JSONObject) {
+            dataJson = responseJson.getJSONObject("data");
+        } else {
+            String decryptedStatusResponse =
+                    DecryptUtil.decrypt(
+                            responseJson.getString("data"),
+                            encryptionKey);
+
+            System.out.println(
+                    "Status Decrypted Response is : "
+                            + decryptedStatusResponse);
+
+            dataJson =
+                    new JSONObject(decryptedStatusResponse);
+        }
+
+        Set<String> expectedDataKeys =
+                new HashSet<String>(
+                        Arrays.asList(
+                                "status",
+                                "txnRefId",
+                                "utr",
+                                "orderId",
+                                "amount"));
+
+        Assert.assertEquals(
+                "Extra or missing fields found in status data response",
+                expectedDataKeys,
+                dataJson.keySet());
+
+        Set<String> allowedStatuses =
+                new HashSet<String>(
+                        Arrays.asList(
+                                "INITIATED",
+                                "SUCCESS",
+                                "FAILED",
+                                "PENDING",
+                                "TAMPERED",
+                                "DUPLICATE",
+                                "EXPIRED",
+                                "REFUNDED",
+                                "TRANSACTION IN PROCESS",
+                                "INCOMPLETE",
+                                "HOLD"));
+
+        String actualStatus =
+                dataJson.getString("status");
+
+        Assert.assertTrue(
+                "Invalid transaction status : " + actualStatus,
+                allowedStatuses.contains(actualStatus));
+
+        Assert.assertEquals(
+                "OrderId mismatch in status response",
+                orderId,
+                dataJson.getString("orderId"));
+
+        Assert.assertNotNull(
+                "txnRefId should not be null",
+                dataJson.get("txnRefId"));
+
+        Assert.assertNotNull(
+                "utr should not be null",
+                dataJson.get("utr"));
+
+        Assert.assertNotNull(
+                "amount should not be null",
+                dataJson.get("amount"));
+
+        TestDataStore.transactionStatus =
+                actualStatus;
+
+        TestDataStore.txnRefId =
+                dataJson.getString("txnRefId");
+
+        TestDataStore.utr =
+                dataJson.get("utr").toString();
+
+        TestDataStore.amount =
+                dataJson.get("amount").toString();
+
+        System.out.println("Status OrderId : " + dataJson.getString("orderId"));
+        System.out.println("Status         : " + actualStatus);
+        System.out.println("TxnRefId       : " + dataJson.getString("txnRefId"));
+        System.out.println("UTR            : " + dataJson.get("utr"));
+        System.out.println("Amount         : " + dataJson.get("amount"));
+    }
+}

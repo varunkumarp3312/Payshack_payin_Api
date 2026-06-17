@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="apiTests.PayinInitiateIntentApiTest" time="12.732" tests="14" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\test-classes;C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\classes;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\pmuae\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pmuae\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\pmuae\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\pmuae\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\pmuae\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AE"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.11\bin"/>
+    <property name="sun.java.command" value="C:\Users\pmuae\AppData\Local\Temp\surefire9706850147488351909\surefirebooter-20260617180822928_3.jar C:\Users\pmuae\AppData\Local\Temp\surefire9706850147488351909 2026-06-17T18-08-22_792-jvmRun1 surefire-20260617180822928_1tmp surefire_0-20260617180822928_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\test-classes;C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\classes;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\pmuae\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pmuae\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\pmuae\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\pmuae\.m2\repository\org\json\json\20240303\json-20240303.jar;C:\Users\pmuae\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\pmuae"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21.0.11"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\pmuae\AppData\Local\Temp\surefire9706850147488351909\surefirebooter-20260617180822928_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.11+9-LTS-211"/>
+    <property name="user.name" value="pmuae"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\pmuae\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\pmuae\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.11"/>
+    <property name="user.dir" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21.0.11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\System32\HWAudioDriver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\windows\system32\HWAudioDriver\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-21.0.11\bin;C:\Users\pmuae\Downloads\apache-maven-3.9.16-bin\apache-maven-3.9.16\bin;C:\Program Files\nodejs\;C:\Users\pmuae\AppData\Roaming\npm;C:\Users\pmuae\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.11+9-LTS-211"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="verifyInitiateWithPhoneMoreThan10Digits" classname="apiTests.PayinInitiateIntentApiTest" time="0.964">
+    <failure message="Success flag should be false for phone more than 10 digits" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Success flag should be false for phone more than 10 digits
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at apiTests.PayinInitiateIntentApiTest.verifyInitiateWithPhoneMoreThan10Digits(PayinInitiateIntentApiTest.java:301)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZbpkqwzsG7RoDgUTvf27dlpB6g1aEZQjp/S2O+3NeQ2WKZ6+EgABjV5ImCICeV+Yz77rBJ6FaliuEoJfadXeOZvsIxzPydGzBQfcjqTZYxdqxdo9ibw9IEUGRY9L6YXRlPMaqTfPewMRaaGdmPer38EGcGLv9GF86gsbEPa+x+6i",
+    "checksum": "faf0a4010944a74a452090a13c6ac053657c545c7114f34951938e2bd148da73"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:35 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:35.701Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "87esAfES28xmWkocs+0JLd6T09/NRho2UxUGZQv5JYil1pZChH+LecUKEdMxH3urCfDduzkhN/iz+o2WJwWMfifov0hP7gLjPqpjnB6E4AgkAIc42qWlEnwBlI9zm66bv6ZxfGbsiH9jfoDB5BlhL6qMNnIYbyzln6ZvPNxe7kw3jSzxXQ5jmAPVuQ8LEWp03e0AaHXX6eOl3SuquwO81YpnpwwKtrNoMqzX7CAZ0BB6Czm2ZkMCNbQ4pdoZkf9z0ZSsrkNjx/P1x/nuOnA6CZa9QmYHU4Jxy6j/skCxI7AQYoJuMPRWESmJEz0WhA5DwssnBTV8/xviOIy9YW+b7jhZXRkV+pF1rLMSY7SziOZt5sBhMQEbAaGRgaMYE5ZP"
+}
+Phone More Than 10 Digits Response : {"timestamp":"2026-06-17T12:38:35.701Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"87esAfES28xmWkocs+0JLd6T09/NRho2UxUGZQv5JYil1pZChH+LecUKEdMxH3urCfDduzkhN/iz+o2WJwWMfifov0hP7gLjPqpjnB6E4AgkAIc42qWlEnwBlI9zm66bv6ZxfGbsiH9jfoDB5BlhL6qMNnIYbyzln6ZvPNxe7kw3jSzxXQ5jmAPVuQ8LEWp03e0AaHXX6eOl3SuquwO81YpnpwwKtrNoMqzX7CAZ0BB6Czm2ZkMCNbQ4pdoZkf9z0ZSsrkNjx/P1x/nuOnA6CZa9QmYHU4Jxy6j/skCxI7AQYoJuMPRWESmJEz0WhA5DwssnBTV8/xviOIy9YW+b7jhZXRkV+pF1rLMSY7SziOZt5sBhMQEbAaGRgaMYE5ZP"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiateResponseMessage" classname="apiTests.PayinInitiateIntentApiTest" time="0.9">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZWpumRF3UFX1ULo0td3JAxMY0xkOlUkhrYpghwjadH//OjYFcGd4Mww7UWL/+NX2dXD51ZByu/6I0nE+J7Zx6KQYG07bTkkAOZQdLK1/saUheaZcZUj74Y8aXb2US6nBgD71Yl7m8EakqFPXbDo+RnG4it/VtI715+xsYH1q0wcR",
+    "checksum": "3ec9a69e320cf83bc1beecb0cbf6e769bcf2d736931d7a2bd8aef9a19c2ada1f"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:36 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:36.608Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "EzoKkqO/MjDgEbwCIaehrI9L7yVotejUa9BwKiVGk2+dgGdph4PYX6p6+BSqdV+XJjjGkWKBPn10YXIW8XzWWiLqtYw7dc3WV18oZZtaLT6TKbC38cZrsaCOKM9+9fllIxNboOVxZpXzms0yznHMS8ht2NyWZewNYpUCGktv68IhEAoR+YCebRueq/NAQOXm70ekCPvYS/KzvdcUnx0txrg0oHQFrr6el+3Bc76/9uR14bksfl6owdp0ouQlb7CW3acgr3DXGPwpW4LlFIPkQDNsEwbedDoyN9L58ykh3ff1viW1690/EFqBmifAdxeI"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyPaymentUrlIsGenerated" classname="apiTests.PayinInitiateIntentApiTest" time="1.036">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZWD6AO8AjdR0Jd3zEZsCpRieMa01XYbvPtQxmnhya4/npntiTCJWH5yS100hbB1U3bQcpXq2i6MJXzuJzCkmBkivDk7+X38d42yE9vQshdiXE5Ykznbq/GgRHYynFWQSw0IicdgUYFkvfvzKDaEtAy7UawW/AflEQ6WU1fR4LMKT",
+    "checksum": "0e2081b6de6d99f5520b2ad1c7b2fcda260995d396b4a7b92cfb1e972a103fe8"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:37 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:37.607Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "HaSfedOxTiF7RnGH0+bmN8rvaGQvBbhTF2ECjJY4fYQIC9PBIPSodCLopn0voLfxOKLDbqOma9b3HA6tzHIkHt+d/wkxSK+xi15SWQniO1pr5nU4u8ZX0toUBuOuDS4aDna/oIMGPW0DD2fq14KCSRtUE/GDuD9kRB1pA4QaSDswGrJw7pcJ7vhyIRu59RY5OIodJPwboFGPNwXsDOSbX3NhQKlY/wMkw9prLjSsU4UxCdrxC7/jO9mNqPMX8dYCwBUGF+/2Qhpstj+b607hNrYGML1fJVwUlcsFBdQnpHCxi4LtFAG++MDUanOBsw3Nbh6GWPnaMoCKaDIzRx+v4c+DGcKs2RT+el7zfzfa1Wx1HeNDKspnLOKV1rlGyVnp"
+}
+Initiate Decrypted Response is : {"orderId":"JFLTMF6HIG2HPD9AR86I","txnRefId":"S9ERSS202661760836","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958721662&ver=1"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiatePayinTransactionWithValidPayload" classname="apiTests.PayinInitiateIntentApiTest" time="0.928">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZdzzKD1uzAwFFBhf0Sky6MI31sWGoZ7MqK4NXQ6qsNoduesvi6n4Vo6FRA9n+ClJ4YZBZ+NsOTq23VqhaLG2ZyuN2/ESTB2awO4W0fjInhyAldPKi87dc+egn6a/Zgsfoy9sxXFbiqyhwU9jaEuIUZpVACjJHV4h1U91DqVJFujH",
+    "checksum": "27fa4088a7e58891acea074d3518c93b62bab823e43cd8be4fcaea1021876a96"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:38 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:38.542Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "ZzqGbguswn7GGLk+nCVr8FTl4tb1I0bVbK6rm1h+RgIHdoMRYEc5sGkwmAeYSLHJmmLUrGfkyXjcJzQDtwpuWgN/GOazCqxzJj4NPnZXs3o9haBrsy4R/aLDbfA2w3i9txfb1HRGQqVRkWmIJ/kRAC442HLoGa0TSR7Qr/5A3U3iAe5cF7jKUcdCN9aQVSw5xJEJqdVHkSsrb2b85qobbIt4yuE93U+TWryomWitcqEGpvIQBDRBgf22EjQN0sM6lZ5NGXOreJYClf21Ipj96icKNbBrB2dNWZSIRl6jaParrSPjUgACWq1O8iUGsNsB"
+}
+Initiate Decrypted Response is : {"orderId":"TPY75HAFK35YD4TAR5OB","txnRefId":"35N1OI202661760837","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958721690"}
+OrderId    : TPY75HAFK35YD4TAR5OB
+TxnRefId   : 35N1OI202661760837
+PaymentUrl : upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958721690
+]]></system-out>
+  </testcase>
+  <testcase name="verifyTxnRefIdIsGenerated" classname="apiTests.PayinInitiateIntentApiTest" time="0.992">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZUbbROhEPZePpXpk2MBrbkPyk+nBRREn6OKcrUHhFK+MpMPWYoNWNviWPLUyOZZpfuJmqUkJ1jRrGKZf7NsSHqFHfJRFrIZbeij+cYC263Qa2qYi9vL/XDNlsBHn6qBItEZZrvL4HwVc2eNarJ/iqAEv01FW5ZS/UJDv1+CjXh1l",
+    "checksum": "40f5e4211b2d697b52d37b79fc3742b45e9181683e8913644f8165dcd352b7c7"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:39 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:39.538Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "qviLpQbrCkig2spCtxKrFNZBE03d6CFqg3sSENCsEkszxLg6d0baR6dordsswjio58d9aOiMmdI3wjAp2ns1PBM5EEmM5znEQlqID3gbaZhzkzvMdpxqGZQXLh1xQ2p93mN/dWqXixMz8m2yUWVghSBrKx9xd7D+Y1EbMAnabpEM7LGkc3VKc5HUPZShvyyb6dIBLyBJ7S/imiBFZ2WTz0Wq/5/Hinm/Zs2e3I7pFio1ZdTd62FmtBCOT9kkIVVEOoDfLeXVfrWt3tS8tw4omaJrkZVB+FzzJM+zlTRyf3HD3XLNzmJhBkUv81ofNVwR+k01eqY6rWXQjnFIV2fzV1q78XFs0loYpflZWm5UFH9kZyRFcAVRmxUz4R9XJ3gA"
+}
+Initiate Decrypted Response is : {"orderId":"141M5JBFORN443P9EO2I","txnRefId":"753DOA202661760838","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958721699&ver=1"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiatePayinTransactionWithAmountMoreThan10000" classname="apiTests.PayinInitiateIntentApiTest" time="0.292">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEvFHI4MuaqDpZLyQZo+IPv9GE/iabDA3BJaJlzH2O9PZDo9rBppEhXDjYJK1JCk+RhwlRF3mFVDcuKKNNo09dDB3wiwO5KjhMHUNH81zfuzK5YYQxe/BWhzbedi+AJRThbgLTTTPa65qKAXnie01NcYMf81Q67ORcx/f+dY2Aqkuzt0SCsfD8xVmUFOUfbi7O",
+    "checksum": "1df6d190f7e514b38a9f2ad124aa65065e02e2fe85fa04c16dc710a972e4204d"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 158
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:39 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T12:38:39.856Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Amount should not be greater than 10000",
+    "success": false
+}
+Request Payload for amount more than 10000 : {"firstName":"pavan","lastName":"kumar","amount":"10001","orderId":"J657I77MDEJFFT72LYFH","phone":"8970411423","userIP":"10.210.10","userId":"dddd","email":"pmkirru33@gmail.com"}
+Response Body for amount more than 10000 : {"timestamp":"2026-06-17T12:38:39.856Z","statusCode":500,"status":"Internal Server Error","message":"Amount should not be greater than 10000","success":false}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiateStatusCodeIs200" classname="apiTests.PayinInitiateIntentApiTest" time="0.865">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZZ0tXZteEEreLKZXIVBfJnAUS+lw9RDfX1DGReHZdBIBH0hK0tucGhiGdpQijbiuWsd8b2qnYID+tLmsFQrapBnMzReIZmA35eohB6K3trgwH+IYdSDXJo/wIvGab+iwcqnXpkitU3zIHChzquMO5cKX0521VDhgr4CmGKnDJuNi",
+    "checksum": "e0a5c4b2d1339ee5f2a370d09f53e084c69591d14782456c5514c5275eea3f63"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:40 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:40.731Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "u3yrksj49+KtbcSVObXLpB6nAyjEN6OBGKfeJ65RS1+5geLMhquN93a77sY1uHpg53VZ/SabW0OxNe4gvR95+KqI/CznWU+ZgT6QB78aT2DzoOQBqfZ5Z2XhGYXJc5GK0I4+Gx+OeynwlnbzgJpj3nSw+3jSu7mIeHhLB72N8WoG/tWts/2fHBo6vWphV+U6Lj8Nen95DdFCf4QnTIXquinES1W9EPGRWRlKKVjDUMOLnAXAgkVZaiSX/U1ZFhDFXDMbzqjrrCV/RH2GzfV+wtLaV1RtTPeJRGMriKnpId0o2Iy1NT+qP2ewzOhzhjKu"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyDecryptedResponseContainsOnlyExpectedFields" classname="apiTests.PayinInitiateIntentApiTest" time="0.995">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZS8T6LBDyjVAIlnqTnWBKT0vyJdu0JuEHmE4dCJdNq4XWTfhx/lfWNEzYoDESI/bpnKGG/CTWPOlxii56P70QLUIUWAWdObVzZEoLGlwqFfY9HcDllFFXQ/8azpnQBliC1swQbI39pKkhN/rCdq8RgPRCSLfL3SJN73nH8QUTNSM",
+    "checksum": "47490536743b4b5443ad65f32d0eec1eb9e624ab9da9dcf9c0133651d397f551"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:41 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:41.698Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "ohVzrg14nQHdWNW3Zxx72du/5/EuFye28q/JiLVoWe87nYstQ/U4Cz0wfdAJ7Xv3bL0BHVgeSCD2CKJFNxdsgSneXLQPLDVzhg1tNxAaHyYEs+fh76kL1mqE5pdsXlMzKA4qLozqqcdXgIhlf4MA8uloHezg+PplDrDTwxDKA/6JLwzw0UK/iNZh/a/otczcctffg5iGS1keY6PrLI/2nHjG9mlMRfxjE9gET/oDBZy1SFwBTYUnEXw4rAg1/UariytpjKQMzAcyUMBx/vDPBv062M+N0df6gFIewYTiT/NAOdjZAwhhrGRhcy32y8QSKm1fsfBXwMOOyqd9MEXp2j5tsuP82eh08uRqVE8cD/+XnqBD/OsASvPxFHw4mOhe"
+}
+Initiate Decrypted Response is : {"orderId":"9FGTI95LA681HKPT7TIJ","txnRefId":"KGIGSF202661760841","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958721733&ver=1"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiateWithPhoneNumberHavingCountryCode" classname="apiTests.PayinInitiateIntentApiTest" time="0.885">
+    <failure message="Success flag should be false for phone with +91 country code" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Success flag should be false for phone with +91 country code
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at apiTests.PayinInitiateIntentApiTest.verifyInitiateWithPhoneNumberHavingCountryCode(PayinInitiateIntentApiTest.java:329)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZaKP9l0bKprYq43jhJjBnfkvg6Z72wGnj9THaeRmJIqUDpI02glm6hlgA5E4QMmxuBRXm86FE1jojHg7uOuxDO9KaVnGjm9kjEUFKraYurkSBh8UjoRt814svDEok3ygiccZM2hCp9eAlGEM7MqMKCLqx9ZV/gis90bSI2+92VBc",
+    "checksum": "f136294531aa2c45597da2c04bd6c098e08e39a1eb1d4a63f471af60e672bc47"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:42 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:42.607Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "FYLYboVOuoE/IpdCPCrVb+Se1durESGz0nEGbSZqa3zWbDA6OJGI2xTfGael9x2I+4+15a42rWDH2sxv5WCkl20u5Lw653zNahJMa30HQ06Rp2K70vN/3+SiE3s16trElq+Hkx00xwnAmE/RFNIJHBl9Oi+yLfjRAFYirFB5C5AYrmUSIJ/Y9qeXT36Npzo+VRgXp3/WV8chtBt7d0CsSL7fgXKXNpCRD6exgfCUR455m/BW7tlPxkJaCgDFqwtnOd2LPLc/NEFVPF+ouK9WdF+5iUDlNpL8RE5hDTPoZZ9R6beUTG67zWHcZ+sADYD3"
+}
+Phone With Country Code Response : {"timestamp":"2026-06-17T12:38:42.607Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"FYLYboVOuoE/IpdCPCrVb+Se1durESGz0nEGbSZqa3zWbDA6OJGI2xTfGael9x2I+4+15a42rWDH2sxv5WCkl20u5Lw653zNahJMa30HQ06Rp2K70vN/3+SiE3s16trElq+Hkx00xwnAmE/RFNIJHBl9Oi+yLfjRAFYirFB5C5AYrmUSIJ/Y9qeXT36Npzo+VRgXp3/WV8chtBt7d0CsSL7fgXKXNpCRD6exgfCUR455m/BW7tlPxkJaCgDFqwtnOd2LPLc/NEFVPF+ouK9WdF+5iUDlNpL8RE5hDTPoZZ9R6beUTG67zWHcZ+sADYD3"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyPaymentUrlContainsUpiPay" classname="apiTests.PayinInitiateIntentApiTest" time="1.003">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZZCfefXZI+QWVjr00Mm0/9PCyWBPA7GUFrrR4pq17xyUeJ84IatXITqrtvDmV8QhqTqDq0twM0d6HNx0Jugw5KrUUwfc8ItO4NZ7nDeJ5/HCEwSWV/bEp1v3tzbu7H4VWUDt8w+OhNO67eZxLGlMlXFsbDcSrr9Tljt69uzlWlWP",
+    "checksum": "60e65bbdc9c06fbebbf874edacce0806338b2c0417b63791b3fb336b7049b6df"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:43 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:43.589Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "n46gwWr091hoHLs69tYbMU+tt0ahQVvhDfE0dZxuZL87hgGObXkUX5UJYdw2tTKKapphjN+XxWyqOrZvC+ubtz++qfBYaNo9+GAx0YdJjY1GBXgvxXkMKvMfnsegAhwW/meHPUKpo8lJZal4NnRqsJLsvB8qJ7cPxq7P1iXaVQ4EGooR3M7ECGy66vpwFfZvShXRewP9iJ7i3ib2b85Fn6L5nFQj7IsM1xv7VAZpYAhQrQNU5I7Paxu74VTUpicjOWmQgGxv9QL0LSSdpGBN/aOEQ9Wy4hKFKeXkYTB5V2YM6byllUHKOuv6CTKb8CZ0/v+MJO+IrsxwFNo4ch3/dMqJA+wqz0YcpG5QXjKZb4AHTSh8kUAsMQEZxzbS+mnc"
+}
+Initiate Decrypted Response is : {"orderId":"ELY1P56G54T2GMAGTG77","txnRefId":"75ANF3202661760842","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958721759&ver=1"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiateSuccessFlagIsTrue" classname="apiTests.PayinInitiateIntentApiTest" time="0.872">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZdBS0L7dadc6uM7hA7sbOlccj9WLV7VH3lefMQzj/cAd1C9wRDsP6fgyUhMd1S7wIYGPmEURVRLaOGJvg0RsEsKok5bxyETsByo4FtHJ3TmwsN8iMqOZz6Ctrbb0QZNnjSm6JfDdjdS2Pw2p/iF8OzNwqy2AguSj9S7u9e5LPlPV",
+    "checksum": "eccb36cd27f0a112f47430d96259413d4fe89a5a2860707b94c2bd8a78d5aaf7"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:44 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:44.482Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "xVTI+XpWmxUlz7mHpAisUWnZKPrk2nQ5wa+Q3/y3qVFaLNJLL/fREHFOzumvdDrYYEztoAtp3BJ580OtrXR8mRXKhFxOXtwblJTVXPmE/hgzt0W0UhYy2bQz1gm8U42XjG94zJCfOTPXlhS5/Gn2sQ6fkuRzXlQuqo9Ii1A7k1/ivNIssz8PtPbNIUeS+iMU/oL+LREhzcaxI2Rtqz15nvEMQWN2vOe5sAz4LU4e50yt3N+eVr+IbJ9fdHSHpkU1g2cgHOmBwA0EnSWtY7zUz1h+bqmNuOSrooBuYkAi814lN+Nh/wks2GL8sg4qQ497"
+}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyInitiateWithInvalidEmailFormat" classname="apiTests.PayinInitiateIntentApiTest" time="0.986">
+    <failure message="Success flag should be false for invalid email" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Success flag should be false for invalid email
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at apiTests.PayinInitiateIntentApiTest.verifyInitiateWithInvalidEmailFormat(PayinInitiateIntentApiTest.java:273)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZeJbsNdt2W+4disIY4Br7POZ74lBihEaqOrkoQXmbz7aMNmRtS18uu+SD+Olhs8sa7KDKKbyPpbvQTaKMeAGZ20zDubSh+dpTSN7TlIIVp5NAWPZ/5MwEZDx5VZ/suQTvLKdV17XFu4eqfEjjRdlqTc=",
+    "checksum": "46a38b9297ee4e68c51e024054b112bfd75caae0c5175dbb152036f69d4de113"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:45 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:45.449Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "2Fi+bZJHh8NY74ypIjagMb+F/YSs4EgNika3Uaz1Bt+ZWeYL94Fd++jkaGf5RuLY3A5lHk8iK69hekDAv5UnzxyDGIc3Brk5MlSBHE3rv0qfKvOazEXJSMcg51P8ZdS2dhbmo8LxszpiQyJUuqYC8IVBtQAQ+Um1zqdsuC2Z4zx7j5h/XNH4R1uEzMtWUjGs4OeGGIJj0eTCtap7E305+mxyQCRv0RkthlEGzoQbCTRfVYJ0hPuHIKNHSUGnEJKfyGuBrWfsXbBiUSkhyyY94eawmMvVE5xW0OM+nYZqRqp7yNWF9td00Upwt+OlLX/79dq/4s6zr+RyZwpoL3pYM4MjrYOJYKCesIdtWxcahjc2EYv95eJKVdKWRyByoVBR"
+}
+Invalid Email Response : {"timestamp":"2026-06-17T12:38:45.449Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"2Fi+bZJHh8NY74ypIjagMb+F/YSs4EgNika3Uaz1Bt+ZWeYL94Fd++jkaGf5RuLY3A5lHk8iK69hekDAv5UnzxyDGIc3Brk5MlSBHE3rv0qfKvOazEXJSMcg51P8ZdS2dhbmo8LxszpiQyJUuqYC8IVBtQAQ+Um1zqdsuC2Z4zx7j5h/XNH4R1uEzMtWUjGs4OeGGIJj0eTCtap7E305+mxyQCRv0RkthlEGzoQbCTRfVYJ0hPuHIKNHSUGnEJKfyGuBrWfsXbBiUSkhyyY94eawmMvVE5xW0OM+nYZqRqp7yNWF9td00Upwt+OlLX/79dq/4s6zr+RyZwpoL3pYM4MjrYOJYKCesIdtWxcahjc2EYv95eJKVdKWRyByoVBR"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyPaymentUrlContainsTxnRefId" classname="apiTests.PayinInitiateIntentApiTest" time="0.956">
+    <failure message="PaymentUrl should contain txnRefId" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: PaymentUrl should contain txnRefId
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at apiTests.PayinInitiateIntentApiTest.verifyPaymentUrlContainsTxnRefId(PayinInitiateIntentApiTest.java:219)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZWk0Zu1OfPY8kQyii5F+OOjlTYe2vLM6sO8+d83eOzQh1OjijOTbipvm9QCkl9T4AQQEbligiPAmqVzB6Fp1OPin5+C5wZDQRXmXnOrwugWfS9dXQ7PLBLYuhGOPl1zqLaSM+XJkCxPiIwyl/fY6q32FgeB+NqMFZKE/3fQrJwEK",
+    "checksum": "fd8aaf8c355d374e38e611f47a1c6f3874809790bd69c7f1daa05f5ac5288af4"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:46 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:46.357Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "dgqT1Tf970KNYiGVlT64Fe3CzW8a2PN+t2Gyx8ynSScFnEtyNnspAL01ZtYksj0tBe98jV2P+XG4iyganmgGuY2MoxPhoBvTFsIQ4gh+N9cbMX+HktDoELCPTgfBKzFN3970gP4kCptFYWSzP3WGUSudkdU9OoKZQgVRUIOF8dMvz7WEL/6WLGZn74tbyDgM9FcRHuiNch/Cci260ny+MfRZKm4ppVMGfBSGZq8IkZRAsJXJUfyLDeDjD2FWyMsgKc2AYP6w10VZ/BDWO9Gwuk+qirTdqmrdD0D/93fvQbhMJ+YaSCc8cotNtdp8qrUU"
+}
+Initiate Decrypted Response is : {"orderId":"GN9D7A8NR5CK7T6OE6F6","txnRefId":"PRTVD2202661760845","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958721822"}
+]]></system-out>
+  </testcase>
+  <testcase name="verifyOrderIdMatchesRequestOrderId" classname="apiTests.PayinInitiateIntentApiTest" time="1.049">
+    <system-out><![CDATA[Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "encryptedBody": "ufLJvWE3ehCTwqWp1zuaf0nSTvFSZJwO8jkoeqUbaALVN6LJs4hjBZsrBpZTRIaEaoCPETwcqtBz1Trh2IpAZftFrwSukYfpHrknWh97O0Ttq6s/PSKlvyl0MH03Tmi0vNKLPcREoGbY+lKH4IKjhpEuptfOosiQWGwxMamBdgm3OzYDzNSpdtINVkBOjmrv37QH+XzWXk7CamJu3NnfvfUf5VmDxJCljp22uA/fGeNYF/YSA2u2fJ/FGPLUJMYV",
+    "checksum": "e496fbd422c0334b7f70f0cba4628b0fc46e280cb68bda9c18b57c3d1376665f"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 12:38:47 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T12:38:47.406Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "hR+6KbGWKXDv9JQj6Gk692fmfjQ+zhMRGMnh5WOHRKoNrtj3Au5TCVZ78ZWKyaPtOcI0gh1K5um/cB49KMsNjCzut6nyn3L0aP93GN26vvwD/1WbfxcPRiuLCOZYGxF2kcY0kohWRdOgwklle93eC6sZwhZBzjk8T9CgahMDWxJyV0sxAZpVVna4cAvoF3vGsfgsIhenmPO58XheA82mGmiy7azt7hVmGS1UzXh4nUClEFwTVxpEWON2BK9sNaWxnSXjYDal6uhnEmI2v2w5w8SLXgBe/ur2loHbyf9n+ERLpgS0NK9ETgjSRMmm85a8cMpre7/hYohn8yNF9q+hkcSZSKs/gSp/IjlSJdRiU5uRU/UatVjILrIZqawXk75X"
+}
+Initiate Decrypted Response is : {"orderId":"HEF857YB63Y7FLAYTTJ7","txnRefId":"UIKCUN202661760846","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958721841&ver=1"}
+]]></system-out>
+  </testcase>
+</testsuite>
