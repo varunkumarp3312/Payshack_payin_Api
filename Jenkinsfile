@@ -111,7 +111,7 @@ pipeline {
                         def failedTestDetails = readFile('target/failed-tests.html')
 
                         emailext(
-                            to: 'pmuaevks33@gmail.com, divyadeveloper9741@gmail.com',
+                            to: 'divyadeveloper9741@gmail.com',
                             subject: "PayShack API Automation FAILED - Build #${BUILD_NUMBER}",
                             mimeType: 'text/html',
                             body: """
