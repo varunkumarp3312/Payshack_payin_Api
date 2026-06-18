@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.payshack.payin.tests.PayinInitiateIntentTest" time="19.29" tests="16" errors="0" skipped="0" failures="13">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\test-classes;C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\classes;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\pmuae\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pmuae\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\pmuae\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\pmuae\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\pmuae\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\pmuae\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\pmuae\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="AE"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21.0.11\bin"/>
+    <property name="sun.java.command" value="C:\Users\pmuae\AppData\Local\Temp\surefire1308198984580372907\surefirebooter-20260617201036448_3.jar C:\Users\pmuae\AppData\Local\Temp\surefire1308198984580372907 2026-06-17T20-10-36_346-jvmRun1 surefire-20260617201036448_1tmp surefire_0-20260617201036448_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\test-classes;C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured\target\classes;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured\5.5.0\rest-assured-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy\4.0.22\groovy-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-xml\4.0.22\groovy-xml-4.0.22.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\pmuae\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\pmuae\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\pmuae\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\pmuae\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\json-path\5.5.0\json-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\groovy\groovy-json\4.0.22\groovy-json-4.0.22.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\rest-assured-common\5.5.0\rest-assured-common-5.5.0.jar;C:\Users\pmuae\.m2\repository\io\rest-assured\xml-path\5.5.0\xml-path-5.5.0.jar;C:\Users\pmuae\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\pmuae\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\pmuae\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.1\jackson-databind-2.17.1.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.1\jackson-annotations-2.17.1.jar;C:\Users\pmuae\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.1\jackson-core-2.17.1.jar;C:\Users\pmuae\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\pmuae\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\pmuae\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\pmuae"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-04-21"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-21.0.11"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\pmuae\AppData\Local\Temp\surefire1308198984580372907\surefirebooter-20260617201036448_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.11+9-LTS-211"/>
+    <property name="user.name" value="pmuae"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\pmuae\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\pmuae\AppData\Local\Temp\"/>
+    <property name="java.version" value="21.0.11"/>
+    <property name="user.dir" value="C:\Users\pmuae\eclipse-workspace\payshack_Rest_Assured"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="env" value="dev"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21.0.11\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Windows\System32\HWAudioDriver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\windows\system32\HWAudioDriver\;C:\Program Files\Git\cmd;C:\Program Files\Java\jdk-21.0.11\bin;C:\Users\pmuae\Downloads\apache-maven-3.9.16-bin\apache-maven-3.9.16\bin;C:\Program Files\nodejs\;C:\Users\pmuae\AppData\Roaming\npm;C:\Users\pmuae\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.11+9-LTS-211"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+  </properties>
+  <testcase name="tc01_verifyHttpStatusCodeIs200" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.139">
+    <system-out><![CDATA[20:10:39.860 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:39.861 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:40 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T14:40:40.916Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZYG1vxw1YMi4jufkX6hBb6BF4rA9gnq6bhyO7xM+VrheTBdgXZRYtSJnaTZ6ixFNNARkfvULJXRNan2Qp/WnNVntToHXOtQHKxn6mMOog2KbFS8VFfYZb0KDlsf6nM/xXM5dEXe5TrE1awVlLXB9DnqKPjVOLmyH0fFFqK8r+poqGl7BXiCpHejx0DtUwz1MQ2lbchy7RbfOkjjs3Iu+K7hgOdgpC4d298/SgX8GLb/GEgBlCi9vkDK98Z8UZ8ZXJ2ZaUVUgaXN4po5LL7dXP857DmKMtGCTPg5lJDXaSBb+VUJpi3dh2NuRy0MFeR2ajbM8S/0Q/wtZkILcNGHtlCw"
+}
+20:10:41.017 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc02_verifyResponseApiStatusCodeIs200" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.166">
+    <failure message="API statusCode mismatch expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: API statusCode mismatch expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc02_verifyResponseApiStatusCodeIs200(PayinInitiateIntentTest.java:63)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:41.018 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:41.018 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:42 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:42.070Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:42.183 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc03_verifyResponseStatusIsOK" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.237">
+    <failure message="API status mismatch expected:&lt;[OK]&gt; but was:&lt;[Internal Server Error]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: API status mismatch expected:<[OK]> but was:<[Internal Server Error]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc03_verifyResponseStatusIsOK(PayinInitiateIntentTest.java:69)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:42.184 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:42.184 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:43 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:43.311Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:43.421 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc04_verifyResponseMessage" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.377">
+    <failure message="expected:&lt;[Transaction Initiated Successfully]&gt; but was:&lt;[Please Send Unique Order ID]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<[Transaction Initiated Successfully]> but was:<[Please Send Unique Order ID]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc04_verifyResponseMessage(PayinInitiateIntentTest.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:43.422 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:43.422 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:44 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:44.688Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:44.797 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc05_verifySuccessFlagIsTrue" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.362">
+    <failure message="success flag should be true" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: success flag should be true
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc05_verifySuccessFlagIsTrue(PayinInitiateIntentTest.java:83)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:44.798 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:44.798 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:46 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:46.045Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:46.157 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc06_verifyDecryptedResponseContainsOnlyExpectedFields" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.166">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc06_verifyDecryptedResponseContainsOnlyExpectedFields(PayinInitiateIntentTest.java:88)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:46.158 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:46.159 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:47 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:47.226Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:47.324 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc07_verifyOrderIdMatchesRequest" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.242">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc07_verifyOrderIdMatchesRequest(PayinInitiateIntentTest.java:97)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:47.326 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:47.327 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:48 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:48.457Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:48.562 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc08_verifyTxnRefIdIsGenerated" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.18">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc08_verifyTxnRefIdIsGenerated(PayinInitiateIntentTest.java:103)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:48.563 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:48.564 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:49 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:49.645Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:49.744 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc09_verifyPaymentUrlIsGenerated" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.275">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc09_verifyPaymentUrlIsGenerated(PayinInitiateIntentTest.java:111)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:49.747 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:49.749 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:50 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:50.923Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:51.021 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc10_verifyPaymentUrlContainsUpiPay" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.209">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc10_verifyPaymentUrlContainsUpiPay(PayinInitiateIntentTest.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:51.022 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:51.022 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:52 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:52.130Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:52.231 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc11_verifyPaymentUrlDoesNotContainTxnRefId" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.272">
+    <failure message="HTTP status should be 200 expected:&lt;200&gt; but was:&lt;500&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: HTTP status should be 200 expected:<200> but was:<500>
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:647)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.executeAndDecrypt(PayinInitiateIntentTest.java:46)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc11_verifyPaymentUrlDoesNotContainTxnRefId(PayinInitiateIntentTest.java:126)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:52.232 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:52.234 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "b07a62b4657e7cff23f1d5e37c88c63b70bc2487b0fb6e34e3bc4003f954c509",
+    "encryptedBody": "pRoaDGjJMOQT/aoskIAsezsyWuI6V2WeL8RpL0pCsZbivUUL9OVWo3yvpGYWXs1H9hz4TJrsq10AKDKKPzH9m8VUJ1yP1UJWlswW3k63Gi34pOotxW6NgPh2uzGaao/HAYEnPpyKAO+Vg5vz2ozJiWtNAS8B4QWfYc0BFGO2Le8qAycWEqE19ilNUd7CSmSSromATeYaFvvsSrqycsA3DFOWUAMrDp9wMUx22d6DrOcWzehrBSlnzvumd9YOt+F6"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 146
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:53 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:53.404Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Please Send Unique Order ID",
+    "success": false
+}
+20:10:53.505 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc12_verifyFullValidPayloadStoresTransactionData" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.243">
+    <system-out><![CDATA[20:10:53.506 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:53.506 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=5H21CBEBKE3J9AJF79YY
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "6c5daef36af5f0902423e62bb4f0fa31cbc8af476b85fff1c97a207aee4af372",
+    "encryptedBody": "MaqBkcO+OhDFCXn854LYiTz7RIns0EkgopKAMOj2SsNNzQyJ9phCg0x4ix1yugl6mnE9Fwhqf0MZdZSAHHccPsCJ6hd8F9bns8ti9HvPjZhehNi3sO6v5ejqTpkQV0VsuRpu7XYI5vg5syYNwb/zkap4yCBzXe6tAef+rpDxo4NVIcU6oNcDeKclkPrRu6Q3s4t17i8gm+ehGlXUfOuYMIYXNUK1k5uSjHpxL1Z61Q04/05su8hs6OjCd95mRrsm"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:54 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T14:40:54.632Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "MaqBkcO+OhDFCXn854LYiTz7RIns0EkgopKAMOj2SsORalT9fHkA2pd6ODctVvpQtz/vQFsV0KBsx5rBkN9lev5LUXD21yW223UTMYGio9H6tbyqO7Jq30kl2uZQs7FfGrPkz2rZF09vbr3pRDloRnXz8tQbcRQuxD1QUeNaZr0675cg6FLaV3ypbEDC8XOfxh3HA617kTZ8FWzmE86QzOdUaaPNMJuM9n98WQxQW9Ill4+lz0nMeC6YuPlmaSShBQQjmN3YMaWeMLj21o4ood2puLNH/K5pPPVvM40y3Y2st2RGvLmSLzJmUGARgcZQ"
+}
+20:10:54.751 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"5H21CBEBKE3J9AJF79YY","txnRefId":"NGLY0I202661781053","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428"}
+20:10:54.751 DEBUG [c.p.p.t.PayinInitiateIntentTest] Decrypted initiate response: {"orderId":"5H21CBEBKE3J9AJF79YY","txnRefId":"NGLY0I202661781053","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428"}
+20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] OrderId    : 5H21CBEBKE3J9AJF79YY
+20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] TxnRefId   : NGLY0I202661781053
+20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] PaymentUrl : upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428
+20:10:54.752 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc13_verifyAmountOver10000IsRejected" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="0.521">
+    <system-out><![CDATA[20:10:54.752 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:54.753 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=E46JF19GBFR5FRHLEMHI
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "8f9f9740e5c5b3e6e8bdae9f4af8b0a239980186314e04380ee15f524888d96c",
+    "encryptedBody": "9KzxnDG72HEk0zia06aiaa1vOURPYY7uAiWTh00sntlNbdMZk51tsLpTPXM1T4WZoAXwuil9tSMMHDtKd4jD0sqlLdln3TDASyLVFIyDsY/a5b80w1Ua5YXMvvbd6V3mMGimAcGuh5TsaucuGB+o3PI+kSg/NFaii1tZn0QHWKQ6Url5U1PpdktYmJ7RDU87jXDTEp0+gvNgMRXp75MrW1fu//88STj1ofe1a/P5VBIMz6K2VzI7KOSn2wGm7ed3"
+}
+HTTP/1.1 500 Internal Server Error
+Content-Type: application/json; charset=utf-8
+Content-Length: 158
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:55 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+X-APISIX-Upstream-Status: 500
+
+{
+    "timestamp": "2026-06-17T14:40:55.143Z",
+    "statusCode": 500,
+    "status": "Internal Server Error",
+    "message": "Amount should not be greater than 10000",
+    "success": false
+}
+20:10:55.245 INFO  [c.p.p.t.PayinInitiateIntentTest] Amount > 10000 response: {"timestamp":"2026-06-17T14:40:55.143Z","statusCode":500,"status":"Internal Server Error","message":"Amount should not be greater than 10000","success":false}
+20:10:55.270 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc14_verifyInvalidEmailFormatIsRejected" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.199">
+    <failure message="success should be false for invalid email" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: success should be false for invalid email
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc14_verifyInvalidEmailFormatIsRejected(PayinInitiateIntentTest.java:175)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:55.273 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:55.274 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=MDNGG97H7GM2T7MYMFYJ
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "2bb64ee3957295c6a3ab4529974f966d12e782ccfd8eb72e41dda27961fb1cda",
+    "encryptedBody": "/Qqh8/OrDiwGW7psxpIZELR2Ly9KyV4icyDVkshD1fxcIXVaWrqyHRSD4WsAoOHw8GFXzuy5rThlTlLMhZgRfiZjKNwYFTt610ct1xuzDQy3GhHPJslVk3srfI4rbBUt07TZSewE/dsJg4uPpcy+RA9TBNOUZHfKJ0gzLTGgHCXbd/zUFhs9wnxQYM6uNZAfyGPGSzmqdTrRVYv6vzBwi8d+3YTOeXpCB35Nra888Qc="
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:56 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T14:40:56.362Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "/Qqh8/OrDiwGW7psxpIZELR2Ly9KyV4icyDVkshD1fwWv5Qr1FAGEnTHqpG9gpfKVMSpm9WwfbUuDobpzsZZBqVTfSLXZM2WlvXIdSims66WisSvgk7g0jZD6GKexd+3UCiVz3lSE5saSFNxRnx3/rsjWzhMTaRYbIK2DQXi2Fo5SW+Q1jRHBaMh+4NuSMUYx7QVNs0MZz9TRscujktdo/ouCXykWKvw5kTfgk+t0u7IDCG+AC9OiLHx5Q+oyU8z6+XF7NLUeqXFKmYXByrGRfI5poO9v+wZPHGnAiJvysKwKUwpuQZcp/u++8PG0Io9Qw056TTydbOOp9KQ6LBhTO11SkilFbCWrfhtfkVBlEiAHjSfdOU/uO/viW95/G/k"
+}
+20:10:56.462 INFO  [c.p.p.t.PayinInitiateIntentTest] Invalid email response: {"timestamp":"2026-06-17T14:40:56.362Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"/Qqh8/OrDiwGW7psxpIZELR2Ly9KyV4icyDVkshD1fwWv5Qr1FAGEnTHqpG9gpfKVMSpm9WwfbUuDobpzsZZBqVTfSLXZM2WlvXIdSims66WisSvgk7g0jZD6GKexd+3UCiVz3lSE5saSFNxRnx3/rsjWzhMTaRYbIK2DQXi2Fo5SW+Q1jRHBaMh+4NuSMUYx7QVNs0MZz9TRscujktdo/ouCXykWKvw5kTfgk+t0u7IDCG+AC9OiLHx5Q+oyU8z6+XF7NLUeqXFKmYXByrGRfI5poO9v+wZPHGnAiJvysKwKUwpuQZcp/u++8PG0Io9Qw056TTydbOOp9KQ6LBhTO11SkilFbCWrfhtfkVBlEiAHjSfdOU/uO/viW95/G/k"}
+20:10:56.471 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc15_verifyPhoneMoreThan10DigitsIsRejected" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.268">
+    <failure message="success should be false for phone &gt; 10 digits" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: success should be false for phone > 10 digits
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc15_verifyPhoneMoreThan10DigitsIsRejected(PayinInitiateIntentTest.java:188)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:56.472 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:56.473 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=42Y75NIGL3PF51517KFK
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "8ce41f370fba4a95687794208fe112ffced163b8e0bf36a554fd7cd5d9df2596",
+    "encryptedBody": "A8NHXgNHIlCzN0bGYxE7t5/F2e63UC8MCMDVqrbX46FuI6t8q88Su9gPs9y7vpNUuxtKcJohSic3l/dL3DwtbDUtxFoSRP0NkgtinONmTUntsDkiINbDjWDWIgcdPMa80udaie1pKa7xCn3pRAu4Dt4Wrl6zBBUOCYXsoQWMtJcIoa//K7G+sgXGUAklmVNCGnsY3Vn3DA+wPuoTZ+ZoB22GC7EBc2BiiF9kNwx4OCJOt808HZ25JJsGD6UYpAyu"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 463
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:57 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T14:40:57.628Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "A8NHXgNHIlCzN0bGYxE7t5/F2e63UC8MCMDVqrbX46Fe3PEHDNQTGpZW2SGRLeeEC7xsb+HJwN7KpjIkITlFs4aqzwowP6nz0lTdO2aqGhXDrFyz1cM0NWpIg4oeGga2XBoeNDDQ59q0+LJbdfeXqZvB9LpZLVEx54IdZbEigZmNd+LCS2fNQzgBJseTaYQLo7DvuUwnlN7k+dDj7Z8bVEQ0hDl7aBSWHSIJw991ygaIGbEU6X9dVvZbbymBbu8UcQdG5pEyPsuzR4yqGLmjgc4JvHWhIBaOP471Y+MvxxUem8G1q4Qdphkf2wBYTmhf"
+}
+20:10:57.731 INFO  [c.p.p.t.PayinInitiateIntentTest] Phone >10 digits response: {"timestamp":"2026-06-17T14:40:57.628Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"A8NHXgNHIlCzN0bGYxE7t5/F2e63UC8MCMDVqrbX46Fe3PEHDNQTGpZW2SGRLeeEC7xsb+HJwN7KpjIkITlFs4aqzwowP6nz0lTdO2aqGhXDrFyz1cM0NWpIg4oeGga2XBoeNDDQ59q0+LJbdfeXqZvB9LpZLVEx54IdZbEigZmNd+LCS2fNQzgBJseTaYQLo7DvuUwnlN7k+dDj7Z8bVEQ0hDl7aBSWHSIJw991ygaIGbEU6X9dVvZbbymBbu8UcQdG5pEyPsuzR4yqGLmjgc4JvHWhIBaOP471Y+MvxxUem8G1q4Qdphkf2wBYTmhf"}
+20:10:57.742 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+  <testcase name="tc16_verifyPhoneWithCountryCodeIsRejected" classname="com.payshack.payin.tests.PayinInitiateIntentTest" time="1.425">
+    <failure message="success should be false for phone with country code" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: success should be false for phone with country code
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at com.payshack.payin.tests.PayinInitiateIntentTest.tc16_verifyPhoneWithCountryCodeIsRejected(PayinInitiateIntentTest.java:201)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[20:10:57.743 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+20:10:57.744 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=YHLAFENYB4FM26F46O7Y
+Request method:	POST
+Request URI:	https://api.payshack.in/payshack-payin/api/v1/payin/ext/txn/initiate-intent
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		client-id=d6ae4e22-412e-4a0d-aed1-a3fae802d68b
+				secret-key=0aecf680-970c-4938-a3e0-2177d293820d
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "checksum": "32db34b3c6ebe123a35966e85ebc84c2aea7c66386eecdc23d8b5aef88e19cf9",
+    "encryptedBody": "kRwRr1u3wkIBcWGUxz36wxWlvbNI9oRbeB4HNg9UI9/9CqEaSO9H6FdN8JmXqP+KrJakRefaNzjfm06sGlLf1yHbQyzCZTT+EFpU990Skh+9dpT1xW9F3y43qol9wTHq2MwX13FuItJq/i6h4KU3epE2Dmo2C8t1wgHWCqM+Ig4+EvRGNEPTjtDiFZjOkE3kR2aibsy1EAiblCapXhGw/CrsJmdwhf/XlFZ4R3rs1ul+Z0ACQRiw2s5/miKPnIa8"
+}
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Content-Length: 527
+Connection: keep-alive
+Date: Wed, 17 Jun 2026 14:40:59 GMT
+vary: Origin
+access-control-allow-origin: *
+Server: APISIX/2.15.1
+
+{
+    "timestamp": "2026-06-17T14:40:59.039Z",
+    "statusCode": 200,
+    "status": "OK",
+    "message": "Transaction Initiated Successfully",
+    "success": true,
+    "data": "kRwRr1u3wkIBcWGUxz36wxWlvbNI9oRbeB4HNg9UI9/sJdAsNqTYBQhBZjcwQbVj3lEZzZg5k6UJNcU0fp4gEAyhv0hUAmUwDJWQFVufOlhnQ8qaj60XcKUGDZ2VUg3Mdanb32qI2izoWxFZ9auc/2mIU8T9Z5MlNUAOecQOGZ/wBXyHCgvRWRvoCZ+YT3IabemaI3QIP09flFcqzJRgHktj4uhhRnzZtTJx3grIykr1iX78jro8Kzle5Wxyx2WocLFHWUlhkjVHXhM6sK7g15FyKeJEUKYGHin3/mhSs4Q6u5QZ5h9izINJR7nQWC7fBOfy7UFrKwh1IS++x+JqYyZ0rZfsWvQOHAeIFnHAfyQj9pd3niyajwVzNovTaygJ"
+}
+20:10:59.143 INFO  [c.p.p.t.PayinInitiateIntentTest] Phone with country code response: {"timestamp":"2026-06-17T14:40:59.039Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"kRwRr1u3wkIBcWGUxz36wxWlvbNI9oRbeB4HNg9UI9/sJdAsNqTYBQhBZjcwQbVj3lEZzZg5k6UJNcU0fp4gEAyhv0hUAmUwDJWQFVufOlhnQ8qaj60XcKUGDZ2VUg3Mdanb32qI2izoWxFZ9auc/2mIU8T9Z5MlNUAOecQOGZ/wBXyHCgvRWRvoCZ+YT3IabemaI3QIP09flFcqzJRgHktj4uhhRnzZtTJx3grIykr1iX78jro8Kzle5Wxyx2WocLFHWUlhkjVHXhM6sK7g15FyKeJEUKYGHin3/mhSs4Q6u5QZ5h9izINJR7nQWC7fBOfy7UFrKwh1IS++x+JqYyZ0rZfsWvQOHAeIFnHAfyQj9pd3niyajwVzNovTaygJ"}
+20:10:59.165 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -3,12 +3,16 @@ pipeline {
 
     tools {
         maven 'Maven'
-         jdk 'JDK 21'
+        jdk 'JDK 21'
+    }
+
+    parameters {
+        choice(name: 'ENV', choices: ['dev', 'staging'], description: 'Target environment')
     }
 
     stages {
 
-        stage('Checkout Code') {
+        stage('Checkout') {
             steps {
                 git branch: 'main',
                     url: 'https://github.com/varunkumarp3312/Payshack_payin_Api.git'
@@ -17,55 +21,42 @@ pipeline {
 
         stage('Run API Tests') {
             steps {
-                /*
-                 * -Dmaven.test.failure.ignore=true allows Maven to continue
-                 * even when some tests fail.
-                 *
-                 * Jenkins JUnit report will still show failed test cases.
-                 */
-                bat 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
+                bat "mvn clean test surefire-report:report -Denv=${params.ENV} -Dmaven.test.failure.ignore=true"
             }
         }
 
-        stage('Publish Test Reports') {
+        stage('Publish JUnit Report') {
             steps {
                 junit allowEmptyResults: true,
                       testResults: 'target/surefire-reports/*.xml'
-
-                archiveArtifacts artifacts: 'target/surefire-reports/**',
-                                 allowEmptyArchive: true
             }
         }
 
         stage('Publish HTML Report') {
             steps {
                 publishHTML([
-                    allowMissing: true,
+                    allowMissing         : true,
                     alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'target/reports',
-                    reportFiles: 'surefire.html',
-                    reportName: 'API Test HTML Report'
+                    keepAll              : true,
+                    reportDir            : 'target/reports',
+                    reportFiles          : 'surefire.html',
+                    reportName           : 'PayShack API Test Report'
                 ])
+            }
+        }
+
+        stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'target/surefire-reports/**, target/logs/**',
+                                 allowEmptyArchive: true
             }
         }
     }
 
     post {
-        always {
-            echo 'API test execution completed.'
-        }
-
-        success {
-            echo 'All API tests passed.'
-        }
-
-        unstable {
-            echo 'Some API tests failed. Check Jenkins Test Result report.'
-        }
-
-        failure {
-            echo 'Pipeline failed due to build or configuration issue.'
-        }
+        always   { echo "Pipeline finished. Environment: ${params.ENV}" }
+        success  { echo 'All tests passed.' }
+        unstable { echo 'Some tests failed. Review the JUnit report.' }
+        failure  { echo 'Build or configuration error. Check the console log.' }
     }
 }

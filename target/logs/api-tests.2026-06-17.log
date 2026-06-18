@@ -1,0 +1,138 @@
+2026-06-17 20:10:37.063 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-17 20:10:37.065 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:10:37.139 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=TL5TTET86GE4Y66E9PR7
+2026-06-17 20:10:39.836 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"TL5TTET86GE4Y66E9PR7","txnRefId":"TRAOCB202661781038","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849159"}
+2026-06-17 20:10:39.846 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=TL5TTET86GE4Y66E9PR7 | txnRefId=TRAOCB202661781038
+2026-06-17 20:10:39.846 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:10:39.848 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:10:39.848 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:10:39.860 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:39.861 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:41.017 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:41.018 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:41.018 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:42.183 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:42.184 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:42.184 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:43.421 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:43.422 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:43.422 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:44.797 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:44.798 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:44.798 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:46.157 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:46.158 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:46.159 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:47.324 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:47.326 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:47.327 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:48.562 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:48.563 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:48.564 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:49.744 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:49.747 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:49.749 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:51.021 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:51.022 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:51.022 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:52.231 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:52.232 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:52.234 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1T5GLY7HGC79KP3BTO2F
+2026-06-17 20:10:53.505 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:53.506 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:53.506 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=5H21CBEBKE3J9AJF79YY
+2026-06-17 20:10:54.751 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"5H21CBEBKE3J9AJF79YY","txnRefId":"NGLY0I202661781053","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428"}
+2026-06-17 20:10:54.751 DEBUG [c.p.p.t.PayinInitiateIntentTest] Decrypted initiate response: {"orderId":"5H21CBEBKE3J9AJF79YY","txnRefId":"NGLY0I202661781053","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428"}
+2026-06-17 20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] OrderId    : 5H21CBEBKE3J9AJF79YY
+2026-06-17 20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] TxnRefId   : NGLY0I202661781053
+2026-06-17 20:10:54.751 INFO  [c.p.p.t.PayinInitiateIntentTest] PaymentUrl : upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958849428
+2026-06-17 20:10:54.752 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:54.752 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:54.753 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=E46JF19GBFR5FRHLEMHI
+2026-06-17 20:10:55.245 INFO  [c.p.p.t.PayinInitiateIntentTest] Amount > 10000 response: {"timestamp":"2026-06-17T14:40:55.143Z","statusCode":500,"status":"Internal Server Error","message":"Amount should not be greater than 10000","success":false}
+2026-06-17 20:10:55.270 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:55.273 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:55.274 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=MDNGG97H7GM2T7MYMFYJ
+2026-06-17 20:10:56.462 INFO  [c.p.p.t.PayinInitiateIntentTest] Invalid email response: {"timestamp":"2026-06-17T14:40:56.362Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"/Qqh8/OrDiwGW7psxpIZELR2Ly9KyV4icyDVkshD1fwWv5Qr1FAGEnTHqpG9gpfKVMSpm9WwfbUuDobpzsZZBqVTfSLXZM2WlvXIdSims66WisSvgk7g0jZD6GKexd+3UCiVz3lSE5saSFNxRnx3/rsjWzhMTaRYbIK2DQXi2Fo5SW+Q1jRHBaMh+4NuSMUYx7QVNs0MZz9TRscujktdo/ouCXykWKvw5kTfgk+t0u7IDCG+AC9OiLHx5Q+oyU8z6+XF7NLUeqXFKmYXByrGRfI5poO9v+wZPHGnAiJvysKwKUwpuQZcp/u++8PG0Io9Qw056TTydbOOp9KQ6LBhTO11SkilFbCWrfhtfkVBlEiAHjSfdOU/uO/viW95/G/k"}
+2026-06-17 20:10:56.471 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:56.472 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:56.473 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=42Y75NIGL3PF51517KFK
+2026-06-17 20:10:57.731 INFO  [c.p.p.t.PayinInitiateIntentTest] Phone >10 digits response: {"timestamp":"2026-06-17T14:40:57.628Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"A8NHXgNHIlCzN0bGYxE7t5/F2e63UC8MCMDVqrbX46Fe3PEHDNQTGpZW2SGRLeeEC7xsb+HJwN7KpjIkITlFs4aqzwowP6nz0lTdO2aqGhXDrFyz1cM0NWpIg4oeGga2XBoeNDDQ59q0+LJbdfeXqZvB9LpZLVEx54IdZbEigZmNd+LCS2fNQzgBJseTaYQLo7DvuUwnlN7k+dDj7Z8bVEQ0hDl7aBSWHSIJw991ygaIGbEU6X9dVvZbbymBbu8UcQdG5pEyPsuzR4yqGLmjgc4JvHWhIBaOP471Y+MvxxUem8G1q4Qdphkf2wBYTmhf"}
+2026-06-17 20:10:57.742 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:57.743 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-17 20:10:57.744 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=YHLAFENYB4FM26F46O7Y
+2026-06-17 20:10:59.143 INFO  [c.p.p.t.PayinInitiateIntentTest] Phone with country code response: {"timestamp":"2026-06-17T14:40:59.039Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"kRwRr1u3wkIBcWGUxz36wxWlvbNI9oRbeB4HNg9UI9/sJdAsNqTYBQhBZjcwQbVj3lEZzZg5k6UJNcU0fp4gEAyhv0hUAmUwDJWQFVufOlhnQ8qaj60XcKUGDZ2VUg3Mdanb32qI2izoWxFZ9auc/2mIU8T9Z5MlNUAOecQOGZ/wBXyHCgvRWRvoCZ+YT3IabemaI3QIP09flFcqzJRgHktj4uhhRnzZtTJx3grIykr1iX78jro8Kzle5Wxyx2WocLFHWUlhkjVHXhM6sK7g15FyKeJEUKYGHin3/mhSs4Q6u5QZ5h9izINJR7nQWC7fBOfy7UFrKwh1IS++x+JqYyZ0rZfsWvQOHAeIFnHAfyQj9pd3niyajwVzNovTaygJ"}
+2026-06-17 20:10:59.165 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-17 20:10:59.170 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:10:59.173 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:10:59.769 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:10:59.771 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:10:59.773 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:00.292 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:00.294 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:00.295 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:00.794 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:00.795 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:00.795 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:01.309 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:01.310 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:01.311 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:01.840 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:01.842 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:01.844 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:02.334 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:02.335 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:02.336 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:02.843 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:02.844 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:02.845 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:03.340 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:03.341 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:03.342 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:03.852 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:11:03.853 INFO  [c.p.p.t.PayinStatusCheckTest] --- Starting: PayinStatusCheckTest ---
+2026-06-17 20:11:03.854 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=your_order_id_here
+2026-06-17 20:11:04.344 INFO  [c.p.p.t.PayinStatusCheckTest] --- Finished: PayinStatusCheckTest ---
+2026-06-17 20:17:20.613 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-17 20:17:20.616 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:17:20.677 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=FT7Y7PTLR1G5TBT68E48
+2026-06-17 20:17:23.378 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"FT7Y7PTLR1G5TBT68E48","txnRefId":"SYFY8D202661781722","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958856081"}
+2026-06-17 20:17:23.383 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=FT7Y7PTLR1G5TBT68E48 | txnRefId=SYFY8D202661781722
+2026-06-17 20:17:23.383 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:17:23.386 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:17:23.387 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:19:43.394 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-17 20:19:43.396 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:19:43.452 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=31FFR4TMT96D627TB78L
+2026-06-17 20:19:46.174 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"31FFR4TMT96D627TB78L","txnRefId":"1EQQX6202661781944","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958858587&ver=1"}
+2026-06-17 20:19:46.180 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=31FFR4TMT96D627TB78L | txnRefId=1EQQX6202661781944
+2026-06-17 20:19:46.180 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:19:46.183 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:19:46.183 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 10s before status check...
+2026-06-17 20:19:56.190 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=null
+2026-06-17 20:19:57.047 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INCOMPLETE","txnRefId":"86EHG3202661644729","utr":"1957232963","amount":301}
+2026-06-17 20:19:57.049 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=null | status=INCOMPLETE
+2026-06-17 20:19:57.050 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:21:02.625 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-17 20:21:02.628 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:21:02.687 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=OYRGGTBM59LOMCT34G7T
+2026-06-17 20:21:05.301 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"OYRGGTBM59LOMCT34G7T","txnRefId":"YKIZKO202661782104","paymentUrl":"upi://pay?pa=DisanEssenti351468.airpay@rbl&pn=Disan+Essentials+4&cu=INR&tn=Pay+to+Disan+Essentials+4&am=100.00&mc=5311&mode=04&tr=AIRPAY1958860022"}
+2026-06-17 20:21:05.306 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=OYRGGTBM59LOMCT34G7T | txnRefId=YKIZKO202661782104
+2026-06-17 20:21:05.306 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:21:05.308 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:21:05.309 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 10s before status check...
+2026-06-17 20:21:15.315 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=null
+2026-06-17 20:21:16.251 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INCOMPLETE","txnRefId":"86EHG3202661644729","utr":"1957232963","amount":301}
+2026-06-17 20:21:16.255 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=null | status=INCOMPLETE
+2026-06-17 20:21:16.257 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-17 20:24:01.080 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-17 20:24:01.083 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-17 20:24:01.140 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=PH1K7KJ2GYRBEHHTT1R2
+2026-06-17 20:24:03.805 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"PH1K7KJ2GYRBEHHTT1R2","txnRefId":"Z9Y5P7202661782402","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1958863112&ver=1"}
+2026-06-17 20:24:03.812 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=PH1K7KJ2GYRBEHHTT1R2 | txnRefId=Z9Y5P7202661782402
+2026-06-17 20:24:03.812 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 10s before status check...
+2026-06-17 20:24:13.830 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=PH1K7KJ2GYRBEHHTT1R2
+2026-06-17 20:24:14.734 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"TRANSACTION IN PROCESS","txnRefId":"Z9Y5P7202661782402","utr":"1958863112","orderId":"PH1K7KJ2GYRBEHHTT1R2","amount":100}
+2026-06-17 20:24:14.735 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=PH1K7KJ2GYRBEHHTT1R2 | status=TRANSACTION IN PROCESS
+2026-06-17 20:24:14.737 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=Z9Y5P7202661782402 | UTR=1958863112 | Amount=100
+2026-06-17 20:24:14.737 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
