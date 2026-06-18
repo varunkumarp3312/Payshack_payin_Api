@@ -247,3 +247,44 @@
 2026-06-18 13:23:07.974 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=7TRNIKFAKB38Y2PC645H | status=TRANSACTION IN PROCESS
 2026-06-18 13:23:07.985 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=B9ELQT202661812253 | UTR=1959463245 | Amount=100
 2026-06-18 13:23:07.986 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-18 13:47:16.153 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-18 13:47:16.161 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:16.218 INFO  [c.p.p.t.PayinInitiateIntentTest] TC01 Request Body: {"orderId":"5GGY5ART6PNPAD6DDGYH","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:16.247 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=5GGY5ART6PNPAD6DDGYH
+2026-06-18 13:47:18.906 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:46.209 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-18 13:47:46.213 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:46.248 INFO  [c.p.p.t.PayinInitiateIntentTest] TC01 Request Body: {"orderId":"EJTYY6179LYR7F55G37I","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:46.278 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=EJTYY6179LYR7F55G37I
+2026-06-18 13:47:48.697 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:48.703 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:48.704 INFO  [c.p.p.t.PayinInitiateIntentTest] TC02 Request Body: {"orderId":"LB1RAG322TF5HITR7FAB","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:48.705 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=LB1RAG322TF5HITR7FAB
+2026-06-18 13:47:50.320 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:50.321 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:50.322 INFO  [c.p.p.t.PayinInitiateIntentTest] TC03 Request Body: {"orderId":"RYHR3F16YC7IINTM7J6L","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:50.322 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=RYHR3F16YC7IINTM7J6L
+2026-06-18 13:47:51.014 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:51.015 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:51.016 INFO  [c.p.p.t.PayinInitiateIntentTest] TC04 Request Body: {"orderId":"72BG91GM36K8AHFER4FO","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:51.016 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=72BG91GM36K8AHFER4FO
+2026-06-18 13:47:51.550 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:51.550 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:51.551 INFO  [c.p.p.t.PayinInitiateIntentTest] TC05 Request Body: {"orderId":"A33Y71C3R5C7TMRFDI51","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:51.551 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=A33Y71C3R5C7TMRFDI51
+2026-06-18 13:47:52.124 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:52.124 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:52.125 INFO  [c.p.p.t.PayinInitiateIntentTest] TC06 Request Body: {"orderId":"LN7YGL528TMB77T4942F","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:52.125 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=LN7YGL528TMB77T4942F
+2026-06-18 13:47:52.684 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"LN7YGL528TMB77T4942F","txnRefId":"TLIGPX202661814751","paymentUrl":"upi://pay?pa=m.appytimes259@mufin&pn=m.appytimes259&am=100&cu=INR&&tn=TLIGPX202661814751&tr=TLIGPX202661814751"}
+2026-06-18 13:47:52.685 DEBUG [c.p.p.t.PayinInitiateIntentTest] Decrypted initiate response: {"orderId":"LN7YGL528TMB77T4942F","txnRefId":"TLIGPX202661814751","paymentUrl":"upi://pay?pa=m.appytimes259@mufin&pn=m.appytimes259&am=100&cu=INR&&tn=TLIGPX202661814751&tr=TLIGPX202661814751"}
+2026-06-18 13:47:52.702 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:52.704 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:52.705 INFO  [c.p.p.t.PayinInitiateIntentTest] TC07 Request Body: {"orderId":"REMOJNM53F1PITA89HPH","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:52.706 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=REMOJNM53F1PITA89HPH
+2026-06-18 13:47:53.310 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"REMOJNM53F1PITA89HPH","txnRefId":"GHCJPA202661814751","paymentUrl":"upi://pay?pa=m.appytimes260@mufin&pn=m.appytimes260&am=100&cu=INR&&tn=GHCJPA202661814751&tr=GHCJPA202661814751"}
+2026-06-18 13:47:53.310 DEBUG [c.p.p.t.PayinInitiateIntentTest] Decrypted initiate response: {"orderId":"REMOJNM53F1PITA89HPH","txnRefId":"GHCJPA202661814751","paymentUrl":"upi://pay?pa=m.appytimes260@mufin&pn=m.appytimes260&am=100&cu=INR&&tn=GHCJPA202661814751&tr=GHCJPA202661814751"}
+2026-06-18 13:47:53.311 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-18 13:47:53.313 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Starting: PayinInitiateIntentTest ---
+2026-06-18 13:47:53.315 INFO  [c.p.p.t.PayinInitiateIntentTest] TC08 Request Body: {"orderId":"NYI9RP4K4F66T94LTTFP","amount":"100","firstName":"pavan","lastName":"kumar","email":"pmkirru33@gmail.com","phone":"8970411423","userIP":"10.210.10","userId":"dddd"}
+2026-06-18 13:47:53.318 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=NYI9RP4K4F66T94LTTFP

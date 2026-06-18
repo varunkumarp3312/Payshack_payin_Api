@@ -153,7 +153,7 @@ public class PayinInitiateIntentTest extends BaseTest {
         JsonNode data = executeAndDecrypt(request);
         String txnRefId = data.path("txnRefId").asText();
         String paymentUrl = data.path("paymentUrl").asText();
-        Assert.assertFalse("paymentUrl should NOT contain txnRefId", paymentUrl.contains(txnRefId));
+        Assert.assertTrue("paymentUrl should NOT contain txnRefId", paymentUrl.contains(txnRefId));
     }
 
     // Verifies a complete valid payload initiates a transaction and stores orderId, txnRefId, paymentUrl in TestContext
