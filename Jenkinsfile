@@ -30,17 +30,8 @@ pipeline {
                         skipMarkingBuildUnstable: true
                     )
 
-                    archiveArtifacts artifacts: 'target/surefire-reports/**',
+                    archiveArtifacts artifacts: 'target/surefire-reports/**, target/reports/**',
                                      allowEmptyArchive: true
-
-                    publishHTML([
-                        allowMissing: true,
-                        alwaysLinkToLastBuild: true,
-                        keepAll: true,
-                        reportDir: 'target/reports',
-                        reportFiles: 'surefire.html',
-                        reportName: 'API Test HTML Report'
-                    ])
 
                     echo "Total Tests  : ${testSummary.totalCount}"
                     echo "Passed Tests : ${testSummary.passCount}"
@@ -157,16 +148,17 @@ PY
 
                                         <p>
                                             <b>HTML Report:</b>
-                                            <a href="${BUILD_URL}API_20Test_20HTML_20Report/">
-                                                Open API Test HTML Report
-                                            </a>
+                                            HTML report files are archived under build artifacts:
+                                            <br>
+                                            target/reports/
                                         </p>
 
                                         <br>
                                         <p>Regards,<br>Jenkins Automation</p>
                                     </body>
                                 </html>
-                            """
+                            """,
+                            attachmentsPattern: 'target/failed-tests.html'
                         )
 
                         error("API test failures found. Email sent. Marking build as FAILURE.")
