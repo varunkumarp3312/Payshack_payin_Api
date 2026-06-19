@@ -184,3 +184,24 @@
 2026-06-19 12:48:42.717 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=BDGY7BY8GTR1J735NNTR
 2026-06-19 12:48:43.976 INFO  [c.p.p.t.PayinInitiateIntentTest] Phone with country code response: {"timestamp":"2026-06-19T07:18:42.354Z","statusCode":200,"status":"OK","message":"Transaction Initiated Successfully","success":true,"data":"RjQShwKsS4Q48YAyd580rk7qtkNI29nai2UByGjx7Wu7aBy9OJRRVTO3esIZ4gobS9EMVxA29zcCtNME9T3IT9qMy2AmTDEsRqSMb810gpNYccTCfnky9WRKKI217Nv7kbbnAAUpKD3yXKzH8FHYVsXfqxrw2eF8sM/EY8mAeXtjCH0UIw1ITuAWgfDC2DCKUK+Gy79EdAVR3nYUUAYxiyHFAqx+XWnQYkRvyQz3AppDH+V74FsXdxnWvMgy5dPT6Bv5412S18bFR5fDRWOM0rav8f/8ZwLRboSQlgqpYMwOA5Y2QwlhbPYV2b8m+Wo1"}
 2026-06-19 12:48:44.000 INFO  [c.p.p.t.PayinInitiateIntentTest] --- Finished: PayinInitiateIntentTest ---
+2026-06-19 15:49:05.465 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-19 15:49:05.468 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-19 15:49:05.532 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=RJRT5F5D6PIFBA127BL7
+2026-06-19 15:49:07.707 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"RJRT5F5D6PIFBA127BL7","txnRefId":"J64DI8202661934905","paymentUrl":"upi://pay?pa=penwinefashionofnhs@topay&pn=PENWINE%2520IT%20SOLUTIONS%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=J64DI8202661934905"}
+2026-06-19 15:49:07.713 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=RJRT5F5D6PIFBA127BL7 | txnRefId=J64DI8202661934905
+2026-06-19 15:49:07.713 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 10s before status check...
+2026-06-19 15:49:17.716 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=RJRT5F5D6PIFBA127BL7
+2026-06-19 15:49:18.273 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"J64DI8202661934905","utr":"","orderId":"RJRT5F5D6PIFBA127BL7","amount":100}
+2026-06-19 15:49:18.275 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=RJRT5F5D6PIFBA127BL7 | status=INITIATED
+2026-06-19 15:49:18.275 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-19 15:49:53.757 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-19 15:49:53.760 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-19 15:49:53.820 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=TPYG64LR8EY5I7TBEY7R
+2026-06-19 15:49:55.969 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"TPYG64LR8EY5I7TBEY7R","txnRefId":"RWMXIN202661934953","paymentUrl":"upi://pay?pa=penwinefashionofnhs@topay&pn=PENWINE%2520IT%20SOLUTIONS%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=RWMXIN202661934953"}
+2026-06-19 15:49:55.975 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=TPYG64LR8EY5I7TBEY7R | txnRefId=RWMXIN202661934953
+2026-06-19 15:49:55.975 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 10s before status check...
+2026-06-19 15:50:05.989 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=TPYG64LR8EY5I7TBEY7R
+2026-06-19 15:50:06.528 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"RWMXIN202661934953","utr":"","orderId":"TPYG64LR8EY5I7TBEY7R","amount":100}
+2026-06-19 15:50:06.529 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=TPYG64LR8EY5I7TBEY7R | status=INITIATED
+2026-06-19 15:50:06.530 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=RWMXIN202661934953 | UTR= | Amount=100
+2026-06-19 15:50:06.531 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---

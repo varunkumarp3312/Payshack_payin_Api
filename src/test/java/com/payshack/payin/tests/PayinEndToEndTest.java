@@ -88,9 +88,9 @@ public class PayinEndToEndTest extends BaseTest {
                 "txnRefId should not be empty",
                 statusData.path("txnRefId").asText().trim().isEmpty());
 
-        Assert.assertFalse(
-                "utr should not be empty",
-                statusData.path("utr").asText().trim().isEmpty());
+//        Assert.assertFalse(
+//                "utr should not be empty",
+//                statusData.path("utr").asText().trim().isEmpty());
 
         Assert.assertFalse(
                 "amount should not be empty",

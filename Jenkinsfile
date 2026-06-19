@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     tools {
-       
         maven '3.9.11'
     }
 
@@ -17,7 +16,7 @@ pipeline {
 
         stage('Run API Tests') {
             steps {
-                bat 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
+                sh 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
             }
         }
 
@@ -50,68 +49,80 @@ pipeline {
 
                     if (testSummary.failCount > 0) {
 
-                        powershell '''
-                            $reportPath = "target\\surefire-reports"
-                            $outputFile = "target\\failed-tests.html"
+                        sh '''
+                            mkdir -p target
 
-                            $html = @"
+                            cat > target/failed-tests.html <<'EOF'
 <html>
 <body>
 <h2>PayShack API Automation - Failed Test Case Details</h2>
-
-<table border='1' cellpadding='8' cellspacing='0'>
+<table border="1" cellpadding="8" cellspacing="0">
 <tr>
     <th>Class Name</th>
     <th>Test Case Name</th>
     <th>Failure Message</th>
 </tr>
-"@
+EOF
 
-                            if (Test-Path $reportPath) {
-                                Get-ChildItem $reportPath -Filter "TEST-*.xml" | ForEach-Object {
-                                    [xml]$xml = Get-Content $_.FullName
+                            python3 <<'PY'
+import glob
+import html
+import xml.etree.ElementTree as ET
 
-                                    foreach ($testcase in $xml.testsuite.testcase) {
-                                        if ($testcase.failure) {
+rows = []
 
-                                            $className = $testcase.classname
-                                            $testName = $testcase.name
-                                            $failureMessage = $testcase.failure.message
+for file in glob.glob("target/surefire-reports/TEST-*.xml"):
+    try:
+        tree = ET.parse(file)
+        root = tree.getroot()
 
-                                            if ($failureMessage -eq $null -or $failureMessage -eq "") {
-                                                $failureMessage = $testcase.failure.InnerText
-                                            }
+        for testcase in root.findall("testcase"):
+            failure = testcase.find("failure")
+            if failure is not None:
+                class_name = testcase.attrib.get("classname", "")
+                test_name = testcase.attrib.get("name", "")
+                failure_message = failure.attrib.get("message", "")
 
-                                            $failureMessage = $failureMessage -replace "&", "&amp;"
-                                            $failureMessage = $failureMessage -replace "<", "&lt;"
-                                            $failureMessage = $failureMessage -replace ">", "&gt;"
+                if not failure_message:
+                    failure_message = failure.text or ""
 
-                                            $html += @"
-<tr>
-    <td>$className</td>
-    <td>$testName</td>
-    <td>$failureMessage</td>
-</tr>
-"@
-                                        }
-                                    }
-                                }
-                            }
+                rows.append(
+                    "<tr>"
+                    "<td>{}</td>"
+                    "<td>{}</td>"
+                    "<td>{}</td>"
+                    "</tr>".format(
+                        html.escape(class_name),
+                        html.escape(test_name),
+                        html.escape(failure_message)
+                    )
+                )
+    except Exception as e:
+        rows.append(
+            "<tr><td colspan='3'>Unable to parse {}: {}</td></tr>".format(
+                html.escape(file),
+                html.escape(str(e))
+            )
+        )
 
-                            $html += @"
+with open("target/failed-tests.html", "a", encoding="utf-8") as f:
+    if rows:
+        f.write("\\n".join(rows))
+    else:
+        f.write("<tr><td colspan='3'>No failed test cases found in Surefire XML.</td></tr>")
+
+    f.write("""
 </table>
 </body>
 </html>
-"@
-
-                            New-Item -ItemType Directory -Force -Path "target" | Out-Null
-                            $html | Out-File -FilePath $outputFile -Encoding UTF8
+""")
+PY
                         '''
 
                         def failedTestDetails = readFile('target/failed-tests.html')
 
                         emailext(
-                            to: 'divyadeveloper9741@gmail.com',
+                            to: 'pmuaevks33@gmail.com, divyadeveloper9741@gmail.com',
                             subject: "PayShack API Automation FAILED - Build #${BUILD_NUMBER}",
                             mimeType: 'text/html',
                             body: """
