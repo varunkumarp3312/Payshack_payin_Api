@@ -30,8 +30,8 @@ public class PayinInitiateIntentTest extends BaseTest {
                 .setLastName("kumar")
                 .setEmail("pmkirru33@gmail.com")
                 .setPhone("8970411423")
-                .setUserIP("10.210.10")
-                .setUserId("dddd");
+                .setUserIP("217.165.72.64")
+                .setUserId("ddrtyuytdd");
     }
 
     private JsonNode executeAndDecrypt(InitiateIntentRequest request) throws Exception {
@@ -166,6 +166,7 @@ public class PayinInitiateIntentTest extends BaseTest {
         TestContext.setOrderId(data.path("orderId").asText());
         TestContext.setTxnRefId(data.path("txnRefId").asText());
         TestContext.setPaymentUrl(data.path("paymentUrl").asText());
+        TestContext.setSharedOrderId(data.path("orderId").asText());
 
         log.info("OrderId    : {}", TestContext.getOrderId());
         log.info("TxnRefId   : {}", TestContext.getTxnRefId());

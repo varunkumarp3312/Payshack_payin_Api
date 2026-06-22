@@ -43,6 +43,7 @@ public class PayinStatusCheckTest extends BaseTest {
      */
     private JsonNode fetchDecryptedData() throws Exception {
         Response response = payinApi.checkStatus(orderId);
+        log.info("Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
         Assert.assertEquals("HTTP status should be 200 before decryption", 200, response.getStatusCode());
 
         Object dataField = response.jsonPath().get("data");
@@ -64,6 +65,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc01_httpStatusCodeShouldBe200() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC01 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
 
         Assert.assertEquals("HTTP status code should be 200", 200, response.getStatusCode());
     }
@@ -74,6 +76,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc02_apiEnvelopeStatusCodeShouldBe200() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC02 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
 
         Assert.assertEquals("Envelope 'statusCode' should be 200",
                 200, response.jsonPath().getInt("statusCode"));
@@ -85,6 +88,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc03_apiEnvelopeStatusShouldBeOK() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC03 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
 
         Assert.assertEquals("Envelope 'status' should be 'OK'",
                 "OK", response.jsonPath().getString("status"));
@@ -96,6 +100,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc04_successFlagShouldBeTrue() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC04 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
 
         Assert.assertTrue("Envelope 'success' flag should be true",
                 response.jsonPath().getBoolean("success"));
@@ -107,6 +112,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc05_messageShouldNotBeBlank() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC05 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
         String message = response.jsonPath().getString("message");
 
         Assert.assertNotNull("Envelope 'message' should not be null", message);
@@ -119,6 +125,7 @@ public class PayinStatusCheckTest extends BaseTest {
     @Test
     public void tc06_envelopeShouldContainDataField() {
         Response response = payinApi.checkStatus(orderId);
+        log.info("TC06 Status API raw response [HTTP {}]: {}", response.getStatusCode(), response.asString());
 
         Assert.assertNotNull("Envelope 'data' field should be present",
                 response.jsonPath().get("data"));

@@ -40,11 +40,11 @@ public class PayinApiService {
                 .header("secret-key", secretKey)
                 .contentType("application/json")
                 .body(body)
-//                .log().all()
+                .log().all()
                 .when()
                 .post(ApiEndpoints.PAYIN_INITIATE_INTENT)
                 .then()
-//                .log().all()
+                .log().all()
                 .extract().response();
     }
 

@@ -8,6 +8,12 @@ public final class TestContext {
 
     private TestContext() {}
 
+    // Shared across test classes within the same JVM run — not cleared by clear()
+    private static volatile String sharedOrderId;
+
+    public static String getSharedOrderId() { return sharedOrderId; }
+    public static void setSharedOrderId(String value) { sharedOrderId = value; }
+
     private static final ThreadLocal<String> orderId = new ThreadLocal<>();
     private static final ThreadLocal<String> txnRefId = new ThreadLocal<>();
     private static final ThreadLocal<String> paymentUrl = new ThreadLocal<>();
