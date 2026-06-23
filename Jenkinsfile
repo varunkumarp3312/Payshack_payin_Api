@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'
+        maven '3.9.11'
     }
 
     stages {
@@ -16,13 +16,7 @@ pipeline {
 
         stage('Run API Tests') {
             steps {
-                script {
-                    if (isUnix()) {
-                        sh 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
-                    } else {
-                        bat 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
-                    }
-                }
+                sh 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
             }
         }
 
@@ -46,12 +40,10 @@ pipeline {
 
                     if (testSummary.failCount > 0) {
 
-                        script {
-                            if (isUnix()) {
-                                sh '''
-                                    mkdir -p target
+                        sh '''
+                            mkdir -p target
 
-                                    cat > target/failed-tests.html <<'EOF'
+                            cat > target/failed-tests.html <<'EOF'
 <html>
 <body>
 <h2>PayShack API Automation - Failed Test Case Details</h2>
@@ -63,7 +55,7 @@ pipeline {
 </tr>
 EOF
 
-                                    python3 <<'PY'
+                            python3 <<'PY'
 import glob
 import html
 import xml.etree.ElementTree as ET
@@ -116,67 +108,7 @@ with open("target/failed-tests.html", "a", encoding="utf-8") as f:
 </html>
 """)
 PY
-                                '''
-                            } else {
-                                powershell '''
-                                    New-Item -ItemType Directory -Force -Path "target" | Out-Null
-
-                                    $reportPath = "target\\surefire-reports"
-                                    $outputFile = "target\\failed-tests.html"
-
-                                    $html = @"
-<html>
-<body>
-<h2>PayShack API Automation - Failed Test Case Details</h2>
-<table border='1' cellpadding='8' cellspacing='0'>
-<tr>
-    <th>Class Name</th>
-    <th>Test Case Name</th>
-    <th>Failure Message</th>
-</tr>
-"@
-
-                                    if (Test-Path $reportPath) {
-                                        Get-ChildItem $reportPath -Filter "TEST-*.xml" | ForEach-Object {
-                                            [xml]$xml = Get-Content $_.FullName
-
-                                            foreach ($testcase in $xml.testsuite.testcase) {
-                                                if ($testcase.failure) {
-
-                                                    $className = $testcase.classname
-                                                    $testName = $testcase.name
-                                                    $failureMessage = $testcase.failure.message
-
-                                                    if ($failureMessage -eq $null -or $failureMessage -eq "") {
-                                                        $failureMessage = $testcase.failure.InnerText
-                                                    }
-
-                                                    $failureMessage = $failureMessage -replace "&", "&amp;"
-                                                    $failureMessage = $failureMessage -replace "<", "&lt;"
-                                                    $failureMessage = $failureMessage -replace ">", "&gt;"
-
-                                                    $html += @"
-<tr>
-    <td>$className</td>
-    <td>$testName</td>
-    <td>$failureMessage</td>
-</tr>
-"@
-                                                }
-                                            }
-                                        }
-                                    }
-
-                                    $html += @"
-</table>
-</body>
-</html>
-"@
-
-                                    $html | Out-File -FilePath $outputFile -Encoding UTF8
-                                '''
-                            }
-                        }
+                        '''
 
                         def failedTestDetails = readFile('target/failed-tests.html')
 
