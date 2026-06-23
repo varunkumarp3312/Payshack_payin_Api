@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run API Tests') {
             steps {
-                sh 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
+                bat 'mvn clean test surefire-report:report -Dmaven.test.failure.ignore=true'
             }
         }
 
@@ -40,7 +40,7 @@ pipeline {
 
                     if (testSummary.failCount > 0) {
 
-                        sh '''
+                        bat '''
                             mkdir -p target
 
                             cat > target/failed-tests.html <<'EOF'
