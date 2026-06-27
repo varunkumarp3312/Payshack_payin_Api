@@ -1,0 +1,126 @@
+2026-06-26 13:31:21.117 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:31:21.142 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:31:21.210 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=R6873H782NTTA11YEY3E
+2026-06-26 13:31:24.012 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"R6873H782NTTA11YEY3E","txnRefId":"C5WBCS202662613121","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=C5WBCS202662613121"}
+2026-06-26 13:31:24.025 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=R6873H782NTTA11YEY3E | txnRefId=C5WBCS202662613121
+2026-06-26 13:31:24.026 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:31:29.037 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=R6873H782NTTA11YEY3E
+2026-06-26 13:31:29.746 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"C5WBCS202662613121","utr":"","orderId":"R6873H782NTTA11YEY3E","amount":100}
+2026-06-26 13:31:29.746 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=R6873H782NTTA11YEY3E | status=INITIATED
+2026-06-26 13:31:29.759 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=C5WBCS202662613121 | UTR= | Amount=100
+2026-06-26 13:31:29.761 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:31:55.844 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:31:55.847 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:31:55.914 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=YEJLFEYGEOCGREIP96M6
+2026-06-26 13:31:58.286 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"YEJLFEYGEOCGREIP96M6","txnRefId":"8HYQUB202662613155","paymentUrl":"upi://pay?pa=m.appytimes290@mufin&pn=m.appytimes290&am=100&cu=INR&&tn=8HYQUB202662613155&tr=8HYQUB202662613155"}
+2026-06-26 13:31:58.291 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=YEJLFEYGEOCGREIP96M6 | txnRefId=8HYQUB202662613155
+2026-06-26 13:31:58.291 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:32:03.300 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=YEJLFEYGEOCGREIP96M6
+2026-06-26 13:32:04.000 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"YEJLFEYGEOCGREIP96M6","status":"INITIATED","txnRefId":"8HYQUB202662613155","utr":"","amount":100}
+2026-06-26 13:32:04.001 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=YEJLFEYGEOCGREIP96M6 | status=INITIATED
+2026-06-26 13:32:04.004 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=8HYQUB202662613155 | UTR= | Amount=100
+2026-06-26 13:32:04.004 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:33:21.665 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:33:21.668 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:33:21.754 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=16JENP7LTGYRIFYGEY2L
+2026-06-26 13:33:24.742 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"16JENP7LTGYRIFYGEY2L","txnRefId":"NPKW8Q202662613321","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=NPKW8Q202662613321"}
+2026-06-26 13:33:24.750 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=16JENP7LTGYRIFYGEY2L | txnRefId=NPKW8Q202662613321
+2026-06-26 13:33:24.750 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:33:29.768 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=16JENP7LTGYRIFYGEY2L
+2026-06-26 13:33:30.489 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"NPKW8Q202662613321","utr":"","orderId":"16JENP7LTGYRIFYGEY2L","amount":100}
+2026-06-26 13:33:30.493 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=16JENP7LTGYRIFYGEY2L | status=INITIATED
+2026-06-26 13:33:30.498 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=NPKW8Q202662613321 | UTR= | Amount=100
+2026-06-26 13:33:30.508 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:33:35.522 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:33:35.524 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:33:35.590 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=FK8A886CJCR3DNM3H7JE
+2026-06-26 13:33:37.850 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:33:45.508 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:33:45.512 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:33:45.576 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=7C5NT61BCE4TL2CJI5YT
+2026-06-26 13:33:47.859 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:34:09.805 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:34:09.808 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:34:09.868 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=TRK5TRPGF2F76TRHL3J6
+2026-06-26 13:34:12.262 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:35:10.110 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:35:10.112 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:35:10.168 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=FFL8TOTHRGOJRTHKGP2E
+2026-06-26 13:35:13.733 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"FFL8TOTHRGOJRTHKGP2E","txnRefId":"TNCCSE202662613509","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1971409360&ver=1"}
+2026-06-26 13:35:13.741 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=FFL8TOTHRGOJRTHKGP2E | txnRefId=TNCCSE202662613509
+2026-06-26 13:35:13.741 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:35:18.754 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=FFL8TOTHRGOJRTHKGP2E
+2026-06-26 13:35:19.970 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"TRANSACTION IN PROCESS","txnRefId":"TNCCSE202662613509","utr":"1971409360","orderId":"FFL8TOTHRGOJRTHKGP2E","amount":100}
+2026-06-26 13:35:19.973 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=FFL8TOTHRGOJRTHKGP2E | status=TRANSACTION IN PROCESS
+2026-06-26 13:35:19.976 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=TNCCSE202662613509 | UTR=1971409360 | Amount=100
+2026-06-26 13:35:19.978 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:35:46.126 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:35:46.130 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:35:46.190 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=ND7577COJYH6FKDBNRGO
+2026-06-26 13:35:49.005 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"ND7577COJYH6FKDBNRGO","txnRefId":"F11451202662613546","paymentUrl":"upi://pay?pa=m.appytimes291@mufin&pn=m.appytimes291&am=100&cu=INR&&tn=F11451202662613546&tr=F11451202662613546"}
+2026-06-26 13:35:49.011 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=ND7577COJYH6FKDBNRGO | txnRefId=F11451202662613546
+2026-06-26 13:35:49.011 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:35:54.022 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=ND7577COJYH6FKDBNRGO
+2026-06-26 13:35:54.674 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"ND7577COJYH6FKDBNRGO","status":"INITIATED","txnRefId":"F11451202662613546","utr":"","amount":100}
+2026-06-26 13:35:54.704 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=ND7577COJYH6FKDBNRGO | status=INITIATED
+2026-06-26 13:35:54.710 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=F11451202662613546 | UTR= | Amount=100
+2026-06-26 13:35:54.712 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:35:56.823 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:35:56.827 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:35:56.883 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=9PEC1GJHKYEIFI3AGOB9
+2026-06-26 13:35:59.926 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"9PEC1GJHKYEIFI3AGOB9","txnRefId":"QGOYQD202662613556","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=QGOYQD202662613556"}
+2026-06-26 13:35:59.936 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=9PEC1GJHKYEIFI3AGOB9 | txnRefId=QGOYQD202662613556
+2026-06-26 13:35:59.936 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:36:04.955 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=9PEC1GJHKYEIFI3AGOB9
+2026-06-26 13:36:05.639 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"QGOYQD202662613556","utr":"","orderId":"9PEC1GJHKYEIFI3AGOB9","amount":100}
+2026-06-26 13:36:05.644 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=9PEC1GJHKYEIFI3AGOB9 | status=INITIATED
+2026-06-26 13:36:05.660 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=QGOYQD202662613556 | UTR= | Amount=100
+2026-06-26 13:36:05.662 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:36:08.461 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:36:08.463 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:36:08.548 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=PDJA5RYLCYKKKAPKYJ4F
+2026-06-26 13:36:11.587 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:37:22.238 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:37:22.239 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:37:22.295 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=OK8E2LR5IDNEGFHNY75F
+2026-06-26 13:37:25.999 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"OK8E2LR5IDNEGFHNY75F","txnRefId":"GPO398202662613722","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1971412555&ver=1"}
+2026-06-26 13:37:26.005 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=OK8E2LR5IDNEGFHNY75F | txnRefId=GPO398202662613722
+2026-06-26 13:37:26.005 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:37:31.017 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=OK8E2LR5IDNEGFHNY75F
+2026-06-26 13:37:31.922 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"TRANSACTION IN PROCESS","txnRefId":"GPO398202662613722","utr":"1971412555","orderId":"OK8E2LR5IDNEGFHNY75F","amount":100}
+2026-06-26 13:37:31.924 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=OK8E2LR5IDNEGFHNY75F | status=TRANSACTION IN PROCESS
+2026-06-26 13:37:31.927 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=GPO398202662613722 | UTR=1971412555 | Amount=100
+2026-06-26 13:37:31.928 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:38:51.887 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:38:51.889 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:38:51.956 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=OK77KT9ER756LCFG9R5P
+2026-06-26 13:38:54.792 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"OK77KT9ER756LCFG9R5P","txnRefId":"IOCR6H202662613851","paymentUrl":"upi://pay?pa=m.appytimes292@mufin&pn=m.appytimes292&am=100&cu=INR&&tn=IOCR6H202662613851&tr=IOCR6H202662613851"}
+2026-06-26 13:38:54.798 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=OK77KT9ER756LCFG9R5P | txnRefId=IOCR6H202662613851
+2026-06-26 13:38:54.798 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:38:59.801 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=OK77KT9ER756LCFG9R5P
+2026-06-26 13:39:00.507 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"OK77KT9ER756LCFG9R5P","status":"INITIATED","txnRefId":"IOCR6H202662613851","utr":"","amount":100}
+2026-06-26 13:39:00.514 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=OK77KT9ER756LCFG9R5P | status=INITIATED
+2026-06-26 13:39:00.519 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=IOCR6H202662613851 | UTR= | Amount=100
+2026-06-26 13:39:00.519 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:39:01.233 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:39:01.237 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:39:01.311 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=AETLPGK78I66RK53TFAF
+2026-06-26 13:39:04.277 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"AETLPGK78I66RK53TFAF","txnRefId":"L5TOHN202662613901","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=L5TOHN202662613901"}
+2026-06-26 13:39:04.285 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=AETLPGK78I66RK53TFAF | txnRefId=L5TOHN202662613901
+2026-06-26 13:39:04.286 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:39:09.307 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=AETLPGK78I66RK53TFAF
+2026-06-26 13:39:10.075 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"L5TOHN202662613901","utr":"","orderId":"AETLPGK78I66RK53TFAF","amount":100}
+2026-06-26 13:39:10.076 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=AETLPGK78I66RK53TFAF | status=INITIATED
+2026-06-26 13:39:10.079 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=L5TOHN202662613901 | UTR= | Amount=100
+2026-06-26 13:39:10.079 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-26 13:39:10.608 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-26 13:39:10.612 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-26 13:39:10.676 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=JDGR75RL4CK8A8O41LGY
+2026-06-26 13:39:14.108 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"JDGR75RL4CK8A8O41LGY","txnRefId":"CM0FDH202662613910","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1971414978&ver=1"}
+2026-06-26 13:39:14.119 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=JDGR75RL4CK8A8O41LGY | txnRefId=CM0FDH202662613910
+2026-06-26 13:39:14.119 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-26 13:39:19.128 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=JDGR75RL4CK8A8O41LGY
+2026-06-26 13:39:20.237 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"TRANSACTION IN PROCESS","txnRefId":"CM0FDH202662613910","utr":"1971414978","orderId":"JDGR75RL4CK8A8O41LGY","amount":100}
+2026-06-26 13:39:20.239 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=JDGR75RL4CK8A8O41LGY | status=TRANSACTION IN PROCESS
+2026-06-26 13:39:20.241 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=CM0FDH202662613910 | UTR=1971414978 | Amount=100
+2026-06-26 13:39:20.241 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---

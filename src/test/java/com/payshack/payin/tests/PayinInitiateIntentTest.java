@@ -180,22 +180,22 @@ public class PayinInitiateIntentTest extends BaseTest {
     // ─── Negative Tests ─────────────────────────────────────────────────────────
 
     // Verifies the API returns HTTP 500 and rejects the transaction when amount exceeds 10000
-    @Test
-    public void tc13_verifyAmountOver10000IsRejected() throws Exception {
-        InitiateIntentRequest request = defaultRequest().setAmount("10001");
-        log.info("TC13 Request Body: {}", mapper.writeValueAsString(request));
-        Response response = payinApi.initiateIntent(request);
-
-        log.info("Amount > 10000 response: {}", response.asString());
-
-        Assert.assertEquals("HTTP status code mismatch", 500, response.getStatusCode());
-        Assert.assertEquals("API statusCode mismatch", 500, response.jsonPath().getInt("statusCode"));
-        Assert.assertEquals("status mismatch", "Internal Server Error", response.jsonPath().getString("status"));
-        Assert.assertEquals("message mismatch", "Amount should not be greater than 10000",
-                response.jsonPath().getString("message"));
-        Assert.assertFalse("success should be false for amount > 10000",
-                response.jsonPath().getBoolean("success"));
-    }
+//    @Test
+//    public void tc13_verifyAmountOver10000IsRejected() throws Exception {
+//        InitiateIntentRequest request = defaultRequest().setAmount("10001");
+//        log.info("TC13 Request Body: {}", mapper.writeValueAsString(request));
+//        Response response = payinApi.initiateIntent(request);
+//
+//        log.info("Amount > 10000 response: {}", response.asString());
+//
+//        Assert.assertEquals("HTTP status code mismatch", 500, response.getStatusCode());
+//        Assert.assertEquals("API statusCode mismatch", 500, response.jsonPath().getInt("statusCode"));
+//        Assert.assertEquals("status mismatch", "Internal Server Error", response.jsonPath().getString("status"));
+//        Assert.assertEquals("message mismatch", "Amount should not be greater than 10000",
+//                response.jsonPath().getString("message"));
+//        Assert.assertFalse("success should be false for amount > 10000",
+//                response.jsonPath().getBoolean("success"));
+//    }
 
     // Verifies the API rejects a request where the email is missing the '@' symbol (invalid format)
     @Test

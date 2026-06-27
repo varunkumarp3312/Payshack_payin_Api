@@ -1,0 +1,11 @@
+2026-06-25 13:17:01.558 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-25 13:17:01.573 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-25 13:17:01.640 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=L93NGRC4T5BR84E3EARG
+2026-06-25 13:17:04.810 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"L93NGRC4T5BR84E3EARG","txnRefId":"9MRF0Q202662511659","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1969691521&ver=1"}
+2026-06-25 13:17:04.817 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=L93NGRC4T5BR84E3EARG | txnRefId=9MRF0Q202662511659
+2026-06-25 13:17:04.818 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-25 13:17:09.829 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=L93NGRC4T5BR84E3EARG
+2026-06-25 13:17:10.812 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"TRANSACTION IN PROCESS","txnRefId":"9MRF0Q202662511659","utr":"1969691521","orderId":"L93NGRC4T5BR84E3EARG","amount":100}
+2026-06-25 13:17:10.821 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=L93NGRC4T5BR84E3EARG | status=TRANSACTION IN PROCESS
+2026-06-25 13:17:10.824 INFO  [c.p.p.tests.PayinEndToEndTest] Status=TRANSACTION IN PROCESS | TxnRefId=9MRF0Q202662511659 | UTR=1969691521 | Amount=100
+2026-06-25 13:17:10.825 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
