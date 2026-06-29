@@ -273,6 +273,14 @@ public class TelegramNotifier {
     }
 
     /** Edits the HTML text of an existing message. Silently ignores "not modified" errors. */
+    public void sendMessage(String htmlText) throws Exception {
+        ObjectNode body = mapper.createObjectNode();
+        body.put("chat_id", chatId);
+        body.put("text", htmlText);
+        body.put("parse_mode", "HTML");
+        post("sendMessage", body);
+    }
+
     public void editMessageText(int messageId, String htmlText) throws Exception {
         ObjectNode body = mapper.createObjectNode();
         body.put("chat_id", chatId);

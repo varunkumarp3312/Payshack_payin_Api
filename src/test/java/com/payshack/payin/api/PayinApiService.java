@@ -1,5 +1,6 @@
 package com.payshack.payin.api;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.payshack.payin.constants.ApiEndpoints;
@@ -79,6 +80,25 @@ public class PayinApiService {
         String decrypted = CryptoUtil.decrypt(encryptedData, encryptionKey);
         log.debug("Decrypted response: {}", decrypted);
         return decrypted;
+    }
+
+    /**
+     * Decrypts the "encryptedData" field from a provider callback payload.
+     * Returns the raw decrypted JSON string.
+     */
+    public String decryptCallbackPayload(String rawPayload) {
+        try {
+            JsonNode node = mapper.readTree(rawPayload);
+            String encryptedData = node.path("encryptedData").asText();
+            if (encryptedData.isEmpty()) {
+                throw new RuntimeException("Callback has no 'encryptedData' field: " + rawPayload);
+            }
+            String decrypted = CryptoUtil.decrypt(encryptedData, encryptionKey);
+            log.debug("Decrypted callback: {}", decrypted);
+            return decrypted;
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to decrypt callback payload", e);
+        }
     }
 
     private String buildEncryptedRequestBody(Object payload) {

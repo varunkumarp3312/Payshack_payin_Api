@@ -1,0 +1,735 @@
+2026-06-27 16:29:13.913 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 16:29:13.928 INFO  [c.p.p.tests.PayinEndToEndTest] --- Starting: PayinEndToEndTest ---
+2026-06-27 16:29:13.992 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=27E5T7D2K8M4GG26T248
+2026-06-27 16:29:16.268 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"27E5T7D2K8M4GG26T248","txnRefId":"YUJBWP202662742913","paymentUrl":"upi://pay?pa=lifylifemmocn@topay&pn=LIFYSIGNALS%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=YUJBWP202662742913"}
+2026-06-27 16:29:16.277 INFO  [c.p.p.tests.PayinEndToEndTest] Initiated | orderId=27E5T7D2K8M4GG26T248 | txnRefId=YUJBWP202662742913
+2026-06-27 16:29:16.277 INFO  [c.p.p.tests.PayinEndToEndTest] Waiting 5s before status check...
+2026-06-27 16:29:21.293 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=27E5T7D2K8M4GG26T248
+2026-06-27 16:29:21.852 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"YUJBWP202662742913","utr":"","orderId":"27E5T7D2K8M4GG26T248","amount":100}
+2026-06-27 16:29:21.853 INFO  [c.p.p.tests.PayinEndToEndTest] Status | orderId=27E5T7D2K8M4GG26T248 | status=INITIATED
+2026-06-27 16:29:21.857 INFO  [c.p.p.tests.PayinEndToEndTest] Status=INITIATED | TxnRefId=YUJBWP202662742913 | UTR= | Amount=100
+2026-06-27 16:29:21.857 INFO  [c.p.p.tests.PayinEndToEndTest] --- Finished: PayinEndToEndTest ---
+2026-06-27 16:53:24.887 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 16:53:24.889 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 16:53:25.088 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=1EYIOB5YNKGTG8HDEPE5
+2026-06-27 16:53:27.897 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"1EYIOB5YNKGTG8HDEPE5","txnRefId":"HAWK1E202662745324","paymentUrl":"upi://pay?pa=disanessentialspri351023@ypbiz&pn=Disan+Essentials+Private+Limited&cu=INR&tn=Pay+to+Disan+Essentials+Private+Limited&am=100.00&mam=100.00&mc=5311&mode=04&tr=AIRPAY1973323005&ver=1"}
+2026-06-27 16:53:27.903 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=1EYIOB5YNKGTG8HDEPE5 | txnRefId=HAWK1E202662745324
+2026-06-27 16:53:28.436 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=4
+2026-06-27 16:53:28.436 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 16:53:28.436 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 16:55:00.837 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 16:55:00.839 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 16:55:01.049 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=ID45MJD6ROMG7DFGGYRD
+2026-06-27 16:55:02.899 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"ID45MJD6ROMG7DFGGYRD","txnRefId":"X5EXYU202662745500","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=X5EXYU202662745500"}
+2026-06-27 16:55:02.904 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=ID45MJD6ROMG7DFGGYRD | txnRefId=X5EXYU202662745500
+2026-06-27 16:55:03.420 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=5
+2026-06-27 16:55:03.420 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 16:55:03.421 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 16:56:44.614 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: Turbo_QA_support
+2026-06-27 16:56:44.749 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 16:56:44.909 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by Turbo_QA_support. Running status check.
+2026-06-27 16:56:44.912 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=ID45MJD6ROMG7DFGGYRD
+2026-06-27 16:56:45.483 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"X5EXYU202662745500","utr":"775234370412","orderId":"ID45MJD6ROMG7DFGGYRD","amount":100}
+2026-06-27 16:56:45.483 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=X5EXYU202662745500 | utr=775234370412 | amount=100
+2026-06-27 16:56:45.483 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=ID45MJD6ROMG7DFGGYRD | status=SUCCESS
+2026-06-27 16:56:45.794 INFO  [c.p.p.utils.TelegramNotifier] Telegram message sent: Volume test can now proceed. Order `ID45MJD6ROMG7DFGGYRD` is SUCCESS.
+2026-06-27 16:56:45.795 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED | orderId=ID45MJD6ROMG7DFGGYRD | status=SUCCESS
+2026-06-27 16:56:45.796 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 16:57:51.025 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 16:57:51.027 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 16:57:51.234 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=69NYTEDIDB8LGJPOOJ1C
+2026-06-27 16:57:53.203 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"69NYTEDIDB8LGJPOOJ1C","txnRefId":"EXQZQZ202662745750","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=EXQZQZ202662745750"}
+2026-06-27 16:57:53.211 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=69NYTEDIDB8LGJPOOJ1C | txnRefId=EXQZQZ202662745750
+2026-06-27 16:57:53.752 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=7
+2026-06-27 16:57:53.752 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 16:57:53.752 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 16:57:53.882 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: Turbo_QA_support
+2026-06-27 16:57:54.022 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 16:59:08.740 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 16:59:08.744 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 16:59:08.954 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=CTYTD7GO431TBAAPGDJ5
+2026-06-27 16:59:11.024 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"CTYTD7GO431TBAAPGDJ5","txnRefId":"DJQUB5202662745908","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=DJQUB5202662745908"}
+2026-06-27 16:59:11.031 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=CTYTD7GO431TBAAPGDJ5 | txnRefId=DJQUB5202662745908
+2026-06-27 16:59:11.566 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=8
+2026-06-27 16:59:11.566 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 16:59:11.566 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 16:59:11.703 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: Turbo_QA_support
+2026-06-27 16:59:11.843 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:01:37.814 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:01:37.817 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:01:38.018 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=35DY7CDA3RENYJ3FJGOY
+2026-06-27 17:01:39.936 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"35DY7CDA3RENYJ3FJGOY","txnRefId":"RM1BDC202662750137","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=RM1BDC202662750137"}
+2026-06-27 17:01:39.942 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=35DY7CDA3RENYJ3FJGOY | txnRefId=RM1BDC202662750137
+2026-06-27 17:01:40.459 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=9
+2026-06-27 17:01:40.460 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:01:40.460 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 17:01:53.971 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: payshack
+2026-06-27 17:01:54.115 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:01:54.264 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:01:54.265 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=35DY7CDA3RENYJ3FJGOY
+2026-06-27 17:01:54.832 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"RM1BDC202662750137","utr":"","orderId":"35DY7CDA3RENYJ3FJGOY","amount":100}
+2026-06-27 17:01:54.833 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=RM1BDC202662750137 | utr= | amount=100
+2026-06-27 17:01:54.833 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=35DY7CDA3RENYJ3FJGOY | status=INITIATED
+2026-06-27 17:01:54.833 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:02:20.018 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=35DY7CDA3RENYJ3FJGOY
+2026-06-27 17:02:20.591 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"RM1BDC202662750137","utr":"","orderId":"35DY7CDA3RENYJ3FJGOY","amount":100}
+2026-06-27 17:02:20.591 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=RM1BDC202662750137 | utr= | amount=100
+2026-06-27 17:02:20.591 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=35DY7CDA3RENYJ3FJGOY | status=INITIATED
+2026-06-27 17:02:20.591 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:02:45.765 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=35DY7CDA3RENYJ3FJGOY
+2026-06-27 17:02:46.270 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"RM1BDC202662750137","utr":"","orderId":"35DY7CDA3RENYJ3FJGOY","amount":100}
+2026-06-27 17:02:46.270 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=RM1BDC202662750137 | utr= | amount=100
+2026-06-27 17:02:46.270 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=35DY7CDA3RENYJ3FJGOY | status=INITIATED
+2026-06-27 17:02:46.426 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=35DY7CDA3RENYJ3FJGOY | finalStatus=INITIATED
+2026-06-27 17:02:46.428 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:14:41.954 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:14:41.957 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:14:42.158 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=5R7DYMN5YE3TE66KAKBM
+2026-06-27 17:14:44.189 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"5R7DYMN5YE3TE66KAKBM","txnRefId":"8QIVR6202662751441","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=8QIVR6202662751441"}
+2026-06-27 17:14:44.196 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=5R7DYMN5YE3TE66KAKBM | txnRefId=8QIVR6202662751441
+2026-06-27 17:14:44.695 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=10
+2026-06-27 17:14:44.696 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:14:44.696 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 17:15:17.347 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: payshack
+2026-06-27 17:15:17.484 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:15:17.643 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:15:17.647 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=5R7DYMN5YE3TE66KAKBM
+2026-06-27 17:15:18.225 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"8QIVR6202662751441","utr":"775234370412","orderId":"5R7DYMN5YE3TE66KAKBM","amount":100}
+2026-06-27 17:15:18.226 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=8QIVR6202662751441 | utr=775234370412 | amount=100
+2026-06-27 17:15:18.226 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=5R7DYMN5YE3TE66KAKBM | status=SUCCESS
+2026-06-27 17:15:18.559 INFO  [c.p.p.utils.TelegramNotifier] Telegram message sent: Volume test can now proceed. Order `5R7DYMN5YE3TE66KAKBM` is SUCCESS.
+2026-06-27 17:15:18.559 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED | orderId=5R7DYMN5YE3TE66KAKBM | status=SUCCESS
+2026-06-27 17:15:18.559 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:15:34.265 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:15:34.269 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:15:34.478 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=DTB3TGYP66YHFHNETGG1
+2026-06-27 17:15:36.481 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"DTB3TGYP66YHFHNETGG1","txnRefId":"3RD33J202662751533","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=3RD33J202662751533"}
+2026-06-27 17:15:36.487 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=DTB3TGYP66YHFHNETGG1 | txnRefId=3RD33J202662751533
+2026-06-27 17:15:37.047 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=12
+2026-06-27 17:15:37.047 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:15:37.047 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 17:15:37.186 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: payshack
+2026-06-27 17:15:37.390 WARN  [c.p.p.utils.TelegramNotifier] answerCallbackQuery failed (query may have expired): Telegram API [answerCallbackQuery] error: {"ok":false,"error_code":400,"description":"Bad Request: query is too old and response timeout expired or query ID is invalid"}
+2026-06-27 17:15:37.541 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:15:37.545 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=DTB3TGYP66YHFHNETGG1
+2026-06-27 17:15:38.122 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3RD33J202662751533","utr":"","orderId":"DTB3TGYP66YHFHNETGG1","amount":100}
+2026-06-27 17:15:38.122 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3RD33J202662751533 | utr= | amount=100
+2026-06-27 17:15:38.122 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=DTB3TGYP66YHFHNETGG1 | status=INITIATED
+2026-06-27 17:15:38.122 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:15:46.776 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:15:46.778 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:15:46.987 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=DD7CIOI6PJ44FLRFJ62G
+2026-06-27 17:15:48.878 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"DD7CIOI6PJ44FLRFJ62G","txnRefId":"D80LSP202662751546","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=D80LSP202662751546"}
+2026-06-27 17:15:48.884 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=DD7CIOI6PJ44FLRFJ62G | txnRefId=D80LSP202662751546
+2026-06-27 17:15:49.391 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=13
+2026-06-27 17:15:49.392 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:15:49.392 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 17:15:49.515 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: payshack
+2026-06-27 17:15:49.647 WARN  [c.p.p.utils.TelegramNotifier] answerCallbackQuery failed (query may have expired): Telegram API [answerCallbackQuery] error: {"ok":false,"error_code":400,"description":"Bad Request: query is too old and response timeout expired or query ID is invalid"}
+2026-06-27 17:15:49.799 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:15:49.801 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=DD7CIOI6PJ44FLRFJ62G
+2026-06-27 17:15:50.317 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"D80LSP202662751546","utr":"","orderId":"DD7CIOI6PJ44FLRFJ62G","amount":100}
+2026-06-27 17:15:50.318 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=D80LSP202662751546 | utr= | amount=100
+2026-06-27 17:15:50.318 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=DD7CIOI6PJ44FLRFJ62G | status=INITIATED
+2026-06-27 17:15:50.318 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:16:03.304 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=DTB3TGYP66YHFHNETGG1
+2026-06-27 17:16:03.904 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3RD33J202662751533","utr":"","orderId":"DTB3TGYP66YHFHNETGG1","amount":100}
+2026-06-27 17:16:03.904 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3RD33J202662751533 | utr= | amount=100
+2026-06-27 17:16:03.904 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=DTB3TGYP66YHFHNETGG1 | status=INITIATED
+2026-06-27 17:16:03.904 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:16:15.492 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=DD7CIOI6PJ44FLRFJ62G
+2026-06-27 17:16:16.040 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"D80LSP202662751546","utr":"","orderId":"DD7CIOI6PJ44FLRFJ62G","amount":100}
+2026-06-27 17:16:16.040 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=D80LSP202662751546 | utr= | amount=100
+2026-06-27 17:16:16.041 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=DD7CIOI6PJ44FLRFJ62G | status=INITIATED
+2026-06-27 17:16:16.041 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:16:29.080 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=DTB3TGYP66YHFHNETGG1
+2026-06-27 17:16:29.594 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3RD33J202662751533","utr":"","orderId":"DTB3TGYP66YHFHNETGG1","amount":100}
+2026-06-27 17:16:29.594 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3RD33J202662751533 | utr= | amount=100
+2026-06-27 17:16:29.594 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=DTB3TGYP66YHFHNETGG1 | status=INITIATED
+2026-06-27 17:16:29.755 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=DTB3TGYP66YHFHNETGG1 | finalStatus=INITIATED
+2026-06-27 17:16:29.756 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:17:22.219 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:17:22.222 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:17:22.422 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=I7E8REDCGF4YD87RP7N3
+2026-06-27 17:17:24.322 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"I7E8REDCGF4YD87RP7N3","txnRefId":"JR4XQ7202662751721","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=JR4XQ7202662751721"}
+2026-06-27 17:17:24.329 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=I7E8REDCGF4YD87RP7N3 | txnRefId=JR4XQ7202662751721
+2026-06-27 17:17:24.850 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent to Telegram, message_id=14
+2026-06-27 17:17:24.851 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:17:24.851 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' button click...
+2026-06-27 17:17:24.975 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by user: payshack
+2026-06-27 17:17:25.128 WARN  [c.p.p.utils.TelegramNotifier] answerCallbackQuery failed (query may have expired): Telegram API [answerCallbackQuery] error: {"ok":false,"error_code":400,"description":"Bad Request: query is too old and response timeout expired or query ID is invalid"}
+2026-06-27 17:17:25.284 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:17:25.286 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=I7E8REDCGF4YD87RP7N3
+2026-06-27 17:17:25.801 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"JR4XQ7202662751721","utr":"","orderId":"I7E8REDCGF4YD87RP7N3","amount":100}
+2026-06-27 17:17:25.801 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=JR4XQ7202662751721 | utr= | amount=100
+2026-06-27 17:17:25.801 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=I7E8REDCGF4YD87RP7N3 | status=INITIATED
+2026-06-27 17:17:25.801 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:22:47.863 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:22:47.867 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:22:48.068 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=FC3Y9YJ5M6MT4AN1H6G5
+2026-06-27 17:22:49.984 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"FC3Y9YJ5M6MT4AN1H6G5","txnRefId":"RCK4DN202662752247","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=RCK4DN202662752247"}
+2026-06-27 17:22:49.991 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=FC3Y9YJ5M6MT4AN1H6G5 | txnRefId=RCK4DN202662752247
+2026-06-27 17:22:50.461 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 17:22:50.605 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=15
+2026-06-27 17:22:50.605 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:22:50.605 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=FC3Y9YJ5M6MT4AN1H6G5, offset=0)...
+2026-06-27 17:23:36.574 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=FC3Y9YJ5M6MT4AN1H6G5
+2026-06-27 17:23:36.752 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=15
+2026-06-27 17:23:36.974 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:23:37.178 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:23:37.181 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=FC3Y9YJ5M6MT4AN1H6G5
+2026-06-27 17:23:37.757 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"RCK4DN202662752247","utr":"775234370412","orderId":"FC3Y9YJ5M6MT4AN1H6G5","amount":100}
+2026-06-27 17:23:37.759 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=RCK4DN202662752247 | utr=775234370412 | amount=100
+2026-06-27 17:23:37.759 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=FC3Y9YJ5M6MT4AN1H6G5 | status=SUCCESS
+2026-06-27 17:23:38.095 INFO  [c.p.p.utils.TelegramNotifier] Telegram message sent: Volume test can now proceed. Order `FC3Y9YJ5M6MT4AN1H6G5` is SUCCESS.
+2026-06-27 17:23:38.095 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED | orderId=FC3Y9YJ5M6MT4AN1H6G5 | status=SUCCESS
+2026-06-27 17:23:38.096 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:24:07.060 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:24:07.063 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:24:07.261 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=EOYT7Y6ED5N6P7JYYYL7
+2026-06-27 17:24:09.186 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"EOYT7Y6ED5N6P7JYYYL7","txnRefId":"A5AEI3202662752406","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=A5AEI3202662752406"}
+2026-06-27 17:24:09.194 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=EOYT7Y6ED5N6P7JYYYL7 | txnRefId=A5AEI3202662752406
+2026-06-27 17:24:09.812 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale Telegram update(s). Next offset = 124355463
+2026-06-27 17:24:09.960 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=17
+2026-06-27 17:24:09.960 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:24:09.961 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=EOYT7Y6ED5N6P7JYYYL7, offset=124355463)...
+2026-06-27 17:24:21.971 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=EOYT7Y6ED5N6P7JYYYL7
+2026-06-27 17:24:22.136 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=17
+2026-06-27 17:24:22.271 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:24:22.420 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:24:22.422 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=EOYT7Y6ED5N6P7JYYYL7
+2026-06-27 17:24:23.049 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"A5AEI3202662752406","utr":"","orderId":"EOYT7Y6ED5N6P7JYYYL7","amount":100}
+2026-06-27 17:24:23.051 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=A5AEI3202662752406 | utr= | amount=100
+2026-06-27 17:24:23.052 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=EOYT7Y6ED5N6P7JYYYL7 | status=INITIATED
+2026-06-27 17:24:23.052 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:24:48.230 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=EOYT7Y6ED5N6P7JYYYL7
+2026-06-27 17:24:48.796 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"A5AEI3202662752406","utr":"","orderId":"EOYT7Y6ED5N6P7JYYYL7","amount":100}
+2026-06-27 17:24:48.796 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=A5AEI3202662752406 | utr= | amount=100
+2026-06-27 17:24:48.796 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=EOYT7Y6ED5N6P7JYYYL7 | status=INITIATED
+2026-06-27 17:24:48.796 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:25:13.955 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=EOYT7Y6ED5N6P7JYYYL7
+2026-06-27 17:25:14.474 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"A5AEI3202662752406","utr":"","orderId":"EOYT7Y6ED5N6P7JYYYL7","amount":100}
+2026-06-27 17:25:14.474 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=A5AEI3202662752406 | utr= | amount=100
+2026-06-27 17:25:14.474 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=EOYT7Y6ED5N6P7JYYYL7 | status=INITIATED
+2026-06-27 17:25:14.621 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=EOYT7Y6ED5N6P7JYYYL7 | finalStatus=INITIATED
+2026-06-27 17:25:14.621 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:36:17.059 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:36:17.062 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:36:17.272 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=EJP6C55DEY4EA6E163P6
+2026-06-27 17:36:19.111 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"EJP6C55DEY4EA6E163P6","txnRefId":"07RJKJ202662753616","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=07RJKJ202662753616"}
+2026-06-27 17:36:19.121 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=EJP6C55DEY4EA6E163P6 | txnRefId=07RJKJ202662753616
+2026-06-27 17:36:19.657 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 17:36:19.880 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=18
+2026-06-27 17:36:19.881 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:36:19.881 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=EJP6C55DEY4EA6E163P6, offset=0)...
+2026-06-27 17:36:51.481 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=EJP6C55DEY4EA6E163P6
+2026-06-27 17:36:51.631 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=18
+2026-06-27 17:36:51.785 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:36:51.946 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:36:51.949 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=EJP6C55DEY4EA6E163P6
+2026-06-27 17:36:52.574 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"07RJKJ202662753616","utr":"775234370412","orderId":"EJP6C55DEY4EA6E163P6","amount":100}
+2026-06-27 17:36:52.575 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=07RJKJ202662753616 | utr=775234370412 | amount=100
+2026-06-27 17:36:52.575 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=EJP6C55DEY4EA6E163P6 | status=SUCCESS
+2026-06-27 17:36:52.761 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED | orderId=EJP6C55DEY4EA6E163P6 | status=SUCCESS
+2026-06-27 17:36:52.762 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:37:57.473 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:37:57.476 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:37:57.673 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=JJL19EFE7PRAF3TH95H4
+2026-06-27 17:37:59.531 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"JJL19EFE7PRAF3TH95H4","txnRefId":"HO1LV7202662753756","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=HO1LV7202662753756"}
+2026-06-27 17:37:59.539 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=JJL19EFE7PRAF3TH95H4 | txnRefId=HO1LV7202662753756
+2026-06-27 17:38:00.172 INFO  [c.p.p.utils.TelegramNotifier] Flushed 3 stale Telegram update(s). Next offset = 124355467
+2026-06-27 17:38:00.340 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=19
+2026-06-27 17:38:00.340 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:38:00.340 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=JJL19EFE7PRAF3TH95H4, offset=124355467)...
+2026-06-27 17:38:04.350 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=JJL19EFE7PRAF3TH95H4
+2026-06-27 17:38:04.521 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=19
+2026-06-27 17:38:04.662 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:38:04.818 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:38:04.820 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=JJL19EFE7PRAF3TH95H4
+2026-06-27 17:38:05.375 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"HO1LV7202662753756","utr":"","orderId":"JJL19EFE7PRAF3TH95H4","amount":100}
+2026-06-27 17:38:05.376 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=HO1LV7202662753756 | utr= | amount=100
+2026-06-27 17:38:05.376 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=JJL19EFE7PRAF3TH95H4 | status=INITIATED
+2026-06-27 17:38:05.376 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:38:30.546 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=JJL19EFE7PRAF3TH95H4
+2026-06-27 17:38:31.107 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"HO1LV7202662753756","utr":"","orderId":"JJL19EFE7PRAF3TH95H4","amount":100}
+2026-06-27 17:38:31.107 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=HO1LV7202662753756 | utr= | amount=100
+2026-06-27 17:38:31.107 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=JJL19EFE7PRAF3TH95H4 | status=INITIATED
+2026-06-27 17:38:31.108 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:38:56.270 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=JJL19EFE7PRAF3TH95H4
+2026-06-27 17:38:56.818 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"HO1LV7202662753756","utr":"","orderId":"JJL19EFE7PRAF3TH95H4","amount":100}
+2026-06-27 17:38:56.818 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=HO1LV7202662753756 | utr= | amount=100
+2026-06-27 17:38:56.818 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=JJL19EFE7PRAF3TH95H4 | status=INITIATED
+2026-06-27 17:38:56.985 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=JJL19EFE7PRAF3TH95H4 | finalStatus=INITIATED
+2026-06-27 17:38:56.986 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:40:06.907 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:40:06.909 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:40:07.106 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=NEA4GFGY6YMD6D1TIPEB
+2026-06-27 17:40:09.001 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"NEA4GFGY6YMD6D1TIPEB","txnRefId":"R093D5202662754006","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=R093D5202662754006"}
+2026-06-27 17:40:09.008 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=NEA4GFGY6YMD6D1TIPEB | txnRefId=R093D5202662754006
+2026-06-27 17:40:09.621 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale Telegram update(s). Next offset = 124355468
+2026-06-27 17:40:09.782 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=20
+2026-06-27 17:40:09.783 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:40:09.783 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=NEA4GFGY6YMD6D1TIPEB, offset=124355468)...
+2026-06-27 17:40:12.172 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=NEA4GFGY6YMD6D1TIPEB
+2026-06-27 17:40:12.378 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=20
+2026-06-27 17:40:12.650 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:40:12.939 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:40:12.943 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=NEA4GFGY6YMD6D1TIPEB
+2026-06-27 17:40:13.543 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"R093D5202662754006","utr":"","orderId":"NEA4GFGY6YMD6D1TIPEB","amount":100}
+2026-06-27 17:40:13.543 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=R093D5202662754006 | utr= | amount=100
+2026-06-27 17:40:13.543 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=NEA4GFGY6YMD6D1TIPEB | status=INITIATED
+2026-06-27 17:40:13.543 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:40:38.692 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=NEA4GFGY6YMD6D1TIPEB
+2026-06-27 17:40:39.249 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"R093D5202662754006","utr":"","orderId":"NEA4GFGY6YMD6D1TIPEB","amount":100}
+2026-06-27 17:40:39.249 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=R093D5202662754006 | utr= | amount=100
+2026-06-27 17:40:39.249 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=NEA4GFGY6YMD6D1TIPEB | status=INITIATED
+2026-06-27 17:40:39.249 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:40:39.393 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:41:51.875 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:41:51.878 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:41:52.076 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=MY5F9TFEFDTJG9CNIT7G
+2026-06-27 17:41:53.982 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"MY5F9TFEFDTJG9CNIT7G","txnRefId":"EEF7BH202662754151","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=EEF7BH202662754151"}
+2026-06-27 17:41:53.987 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=MY5F9TFEFDTJG9CNIT7G | txnRefId=EEF7BH202662754151
+2026-06-27 17:41:54.593 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale Telegram update(s). Next offset = 124355469
+2026-06-27 17:41:54.749 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=21
+2026-06-27 17:41:54.750 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:41:54.750 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=MY5F9TFEFDTJG9CNIT7G, offset=124355469)...
+2026-06-27 17:41:58.798 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=MY5F9TFEFDTJG9CNIT7G
+2026-06-27 17:41:59.102 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=21
+2026-06-27 17:41:59.297 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:41:59.439 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:41:59.441 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=MY5F9TFEFDTJG9CNIT7G
+2026-06-27 17:41:59.992 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EEF7BH202662754151","utr":"","orderId":"MY5F9TFEFDTJG9CNIT7G","amount":100}
+2026-06-27 17:41:59.993 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EEF7BH202662754151 | utr= | amount=100
+2026-06-27 17:41:59.993 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=MY5F9TFEFDTJG9CNIT7G | status=INITIATED
+2026-06-27 17:41:59.993 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:42:25.159 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=MY5F9TFEFDTJG9CNIT7G
+2026-06-27 17:42:25.690 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EEF7BH202662754151","utr":"","orderId":"MY5F9TFEFDTJG9CNIT7G","amount":100}
+2026-06-27 17:42:25.690 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EEF7BH202662754151 | utr= | amount=100
+2026-06-27 17:42:25.690 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=MY5F9TFEFDTJG9CNIT7G | status=INITIATED
+2026-06-27 17:42:25.690 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:42:50.864 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=MY5F9TFEFDTJG9CNIT7G
+2026-06-27 17:42:51.373 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EEF7BH202662754151","utr":"","orderId":"MY5F9TFEFDTJG9CNIT7G","amount":100}
+2026-06-27 17:42:51.373 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EEF7BH202662754151 | utr= | amount=100
+2026-06-27 17:42:51.373 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=MY5F9TFEFDTJG9CNIT7G | status=INITIATED
+2026-06-27 17:42:51.533 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=MY5F9TFEFDTJG9CNIT7G | finalStatus=INITIATED
+2026-06-27 17:42:51.534 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:47:04.350 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:47:04.353 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:47:04.558 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=O6RT7B82F86RPMY66625
+2026-06-27 17:47:06.608 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"O6RT7B82F86RPMY66625","txnRefId":"L3NFAA202662754704","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=L3NFAA202662754704"}
+2026-06-27 17:47:06.613 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=O6RT7B82F86RPMY66625 | txnRefId=L3NFAA202662754704
+2026-06-27 17:47:07.144 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 17:47:07.320 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=22
+2026-06-27 17:47:07.320 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:47:07.320 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=O6RT7B82F86RPMY66625, offset=0)...
+2026-06-27 17:47:16.847 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=O6RT7B82F86RPMY66625
+2026-06-27 17:47:17.005 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=22
+2026-06-27 17:47:17.154 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:47:17.323 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:47:17.326 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=O6RT7B82F86RPMY66625
+2026-06-27 17:47:17.896 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"L3NFAA202662754704","utr":"","orderId":"O6RT7B82F86RPMY66625","amount":100}
+2026-06-27 17:47:17.896 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=L3NFAA202662754704 | utr= | amount=100
+2026-06-27 17:47:17.896 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=O6RT7B82F86RPMY66625 | status=INITIATED
+2026-06-27 17:47:17.896 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:47:43.072 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=O6RT7B82F86RPMY66625
+2026-06-27 17:47:43.623 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"L3NFAA202662754704","utr":"","orderId":"O6RT7B82F86RPMY66625","amount":100}
+2026-06-27 17:47:43.623 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=L3NFAA202662754704 | utr= | amount=100
+2026-06-27 17:47:43.623 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=O6RT7B82F86RPMY66625 | status=INITIATED
+2026-06-27 17:47:43.623 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:47:43.792 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 17:56:03.928 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 17:56:03.931 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 17:56:04.142 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=GHPYTKEMNFR1FEF8LBFG
+2026-06-27 17:56:06.114 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"GHPYTKEMNFR1FEF8LBFG","txnRefId":"AAOT2G202662755603","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=AAOT2G202662755603"}
+2026-06-27 17:56:06.120 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=GHPYTKEMNFR1FEF8LBFG | txnRefId=AAOT2G202662755603
+2026-06-27 17:56:06.648 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 17:56:06.883 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=23
+2026-06-27 17:56:06.884 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for group member to confirm payment (timeout=300s)...
+2026-06-27 17:56:06.884 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for 'Paid' click (orderId=GHPYTKEMNFR1FEF8LBFG, offset=0)...
+2026-06-27 17:56:33.919 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=GHPYTKEMNFR1FEF8LBFG
+2026-06-27 17:56:34.078 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=23
+2026-06-27 17:56:34.221 INFO  [c.p.p.utils.TelegramNotifier] Answered callback query: Verifying payment...
+2026-06-27 17:56:34.371 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by payshack. Running status check.
+2026-06-27 17:56:34.374 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=GHPYTKEMNFR1FEF8LBFG
+2026-06-27 17:56:34.956 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"AAOT2G202662755603","utr":"","orderId":"GHPYTKEMNFR1FEF8LBFG","amount":100}
+2026-06-27 17:56:34.956 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=AAOT2G202662755603 | utr= | amount=100
+2026-06-27 17:56:34.956 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=GHPYTKEMNFR1FEF8LBFG | status=INITIATED
+2026-06-27 17:56:34.956 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 17:57:00.141 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=GHPYTKEMNFR1FEF8LBFG
+2026-06-27 17:57:00.678 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"AAOT2G202662755603","utr":"","orderId":"GHPYTKEMNFR1FEF8LBFG","amount":100}
+2026-06-27 17:57:00.678 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=AAOT2G202662755603 | utr= | amount=100
+2026-06-27 17:57:00.678 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=GHPYTKEMNFR1FEF8LBFG | status=INITIATED
+2026-06-27 17:57:00.678 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 17:57:00.971 DEBUG [c.p.p.utils.TelegramNotifier] editMessageText skipped — content unchanged for message_id=23
+2026-06-27 17:57:25.979 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=GHPYTKEMNFR1FEF8LBFG
+2026-06-27 17:57:26.500 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"AAOT2G202662755603","utr":"","orderId":"GHPYTKEMNFR1FEF8LBFG","amount":100}
+2026-06-27 17:57:26.500 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=AAOT2G202662755603 | utr= | amount=100
+2026-06-27 17:57:26.500 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=GHPYTKEMNFR1FEF8LBFG | status=INITIATED
+2026-06-27 17:57:26.832 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=GHPYTKEMNFR1FEF8LBFG | finalStatus=INITIATED
+2026-06-27 17:57:26.833 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 18:08:51.789 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:08:51.792 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:08:52.604 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 18:08:52.629 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=53TKL5TFEBY34KABR68Y
+2026-06-27 18:08:54.342 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"53TKL5TFEBY34KABR68Y","txnRefId":"4TT617202662760853","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=4TT617202662760853"}
+2026-06-27 18:08:54.343 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=53TKL5TFEBY34KABR68Y | txnRefId=4TT617202662760853
+2026-06-27 18:08:54.496 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=24
+2026-06-27 18:08:54.496 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for button click (timeout=300s)...
+2026-06-27 18:08:54.496 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=53TKL5TFEBY34KABR68Y)...
+2026-06-27 18:09:04.794 INFO  [c.p.p.utils.TelegramNotifier] 'Not Now' clicked by Turbo_QA_support for orderId=53TKL5TFEBY34KABR68Y
+2026-06-27 18:09:04.939 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=24
+2026-06-27 18:09:05.247 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 120s for user to reply with number of minutes...
+2026-06-27 18:09:27.256 INFO  [c.p.p.utils.TelegramNotifier] User replied with 1 minute(s)
+2026-06-27 18:09:27.455 INFO  [c.p.p.t.PayinTelegramFlowTest] Not Now clicked by Turbo_QA_support. Sleeping 1 minute(s) until 06:10 PM, 27 Jun 2026
+2026-06-27 18:10:27.457 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=7TFJ66TJLIIPOBLEJBD2
+2026-06-27 18:10:27.993 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"7TFJ66TJLIIPOBLEJBD2","txnRefId":"PVLL7C202662761027","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=PVLL7C202662761027"}
+2026-06-27 18:10:27.993 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=7TFJ66TJLIIPOBLEJBD2 | txnRefId=PVLL7C202662761027
+2026-06-27 18:10:28.398 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=26
+2026-06-27 18:10:28.398 INFO  [c.p.p.t.PayinTelegramFlowTest] Waiting for button click (timeout=300s)...
+2026-06-27 18:10:28.399 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=7TFJ66TJLIIPOBLEJBD2)...
+2026-06-27 18:10:34.789 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by Turbo_QA_support for orderId=7TFJ66TJLIIPOBLEJBD2
+2026-06-27 18:10:35.021 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=26
+2026-06-27 18:10:35.349 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' clicked by Turbo_QA_support. Running status check.
+2026-06-27 18:10:35.354 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=7TFJ66TJLIIPOBLEJBD2
+2026-06-27 18:10:35.920 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"PVLL7C202662761027","utr":"","orderId":"7TFJ66TJLIIPOBLEJBD2","amount":100}
+2026-06-27 18:10:35.921 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=PVLL7C202662761027 | utr= | amount=100
+2026-06-27 18:10:35.922 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=7TFJ66TJLIIPOBLEJBD2 | status=INITIATED
+2026-06-27 18:10:35.922 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 18:11:01.113 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=7TFJ66TJLIIPOBLEJBD2
+2026-06-27 18:11:01.692 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"PVLL7C202662761027","utr":"","orderId":"7TFJ66TJLIIPOBLEJBD2","amount":100}
+2026-06-27 18:11:01.692 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=PVLL7C202662761027 | utr= | amount=100
+2026-06-27 18:11:01.693 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=7TFJ66TJLIIPOBLEJBD2 | status=INITIATED
+2026-06-27 18:11:01.693 INFO  [c.p.p.t.PayinTelegramFlowTest] Status is INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 18:11:01.839 DEBUG [c.p.p.utils.TelegramNotifier] editMessageText skipped — content unchanged for message_id=26
+2026-06-27 18:11:26.841 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=7TFJ66TJLIIPOBLEJBD2
+2026-06-27 18:11:27.389 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"PVLL7C202662761027","utr":"","orderId":"7TFJ66TJLIIPOBLEJBD2","amount":100}
+2026-06-27 18:11:27.394 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=PVLL7C202662761027 | utr= | amount=100
+2026-06-27 18:11:27.394 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=7TFJ66TJLIIPOBLEJBD2 | status=INITIATED
+2026-06-27 18:11:27.553 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=7TFJ66TJLIIPOBLEJBD2 | finalStatus=INITIATED
+2026-06-27 18:11:27.558 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 18:34:30.181 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:34:30.187 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:34:31.393 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 18:34:31.439 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=67LFFFYK6EE1I68DMJYI
+2026-06-27 18:34:34.055 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"67LFFFYK6EE1I68DMJYI","txnRefId":"82O5P9202662763433","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=82O5P9202662763433"}
+2026-06-27 18:34:34.056 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=67LFFFYK6EE1I68DMJYI | txnRefId=82O5P9202662763433
+2026-06-27 18:34:34.287 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=27
+2026-06-27 18:34:34.288 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=67LFFFYK6EE1I68DMJYI)...
+2026-06-27 18:35:21.744 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:35:21.747 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:35:22.798 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 18:35:22.823 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=T9Y8FPN2RM4E5T1O5PF3
+2026-06-27 18:35:25.450 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"T9Y8FPN2RM4E5T1O5PF3","txnRefId":"29Q820202662763524","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=29Q820202662763524"}
+2026-06-27 18:35:25.451 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=T9Y8FPN2RM4E5T1O5PF3 | txnRefId=29Q820202662763524
+2026-06-27 18:35:25.738 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=28
+2026-06-27 18:35:25.738 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=T9Y8FPN2RM4E5T1O5PF3)...
+2026-06-27 18:35:33.064 INFO  [c.p.p.utils.TelegramNotifier] 'Not Now' clicked by payshack for orderId=T9Y8FPN2RM4E5T1O5PF3
+2026-06-27 18:35:33.377 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=28
+2026-06-27 18:35:33.751 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 120s for user to reply with number of minutes...
+2026-06-27 18:35:40.638 INFO  [c.p.p.utils.TelegramNotifier] User replied with 5 minute(s)
+2026-06-27 18:35:40.971 INFO  [c.p.p.t.PayinTelegramFlowTest] Not Now by payshack. Sleeping 5 min until 06:40 PM, 27 Jun 2026
+2026-06-27 18:35:56.607 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:35:56.610 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:35:57.925 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale update(s). Next offset = 124355477
+2026-06-27 18:35:58.032 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=KIE5HHRRLHRIYJ2FRHCN
+2026-06-27 18:36:01.354 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"KIE5HHRRLHRIYJ2FRHCN","txnRefId":"EH88YE202662763600","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=EH88YE202662763600"}
+2026-06-27 18:36:01.355 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=KIE5HHRRLHRIYJ2FRHCN | txnRefId=EH88YE202662763600
+2026-06-27 18:36:01.529 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=30
+2026-06-27 18:36:01.530 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=KIE5HHRRLHRIYJ2FRHCN)...
+2026-06-27 18:36:12.965 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=KIE5HHRRLHRIYJ2FRHCN
+2026-06-27 18:36:13.257 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=30
+2026-06-27 18:36:13.689 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 18:36:13.697 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=KIE5HHRRLHRIYJ2FRHCN
+2026-06-27 18:36:14.451 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EH88YE202662763600","utr":"","orderId":"KIE5HHRRLHRIYJ2FRHCN","amount":100}
+2026-06-27 18:36:14.453 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EH88YE202662763600 | utr= | amount=100
+2026-06-27 18:36:14.454 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=KIE5HHRRLHRIYJ2FRHCN | status=INITIATED
+2026-06-27 18:36:14.454 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 18:36:39.675 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=KIE5HHRRLHRIYJ2FRHCN
+2026-06-27 18:36:40.593 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EH88YE202662763600","utr":"","orderId":"KIE5HHRRLHRIYJ2FRHCN","amount":100}
+2026-06-27 18:36:40.594 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EH88YE202662763600 | utr= | amount=100
+2026-06-27 18:36:40.601 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=KIE5HHRRLHRIYJ2FRHCN | status=INITIATED
+2026-06-27 18:36:40.602 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 18:37:05.796 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=KIE5HHRRLHRIYJ2FRHCN
+2026-06-27 18:37:06.421 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"EH88YE202662763600","utr":"","orderId":"KIE5HHRRLHRIYJ2FRHCN","amount":100}
+2026-06-27 18:37:06.421 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=EH88YE202662763600 | utr= | amount=100
+2026-06-27 18:37:06.422 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=KIE5HHRRLHRIYJ2FRHCN | status=INITIATED
+2026-06-27 18:37:06.672 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=KIE5HHRRLHRIYJ2FRHCN | finalStatus=INITIATED
+2026-06-27 18:37:06.674 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 18:53:04.210 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:53:04.212 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:53:05.281 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 18:53:05.300 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver started — listening on port 8089
+2026-06-27 18:53:05.300 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL: http://localhost:8089/payin/callback
+2026-06-27 18:53:05.355 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=RBH2HBOPO6G8TEGF58CY
+2026-06-27 18:53:09.033 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"RBH2HBOPO6G8TEGF58CY","txnRefId":"3XQGG8202662765307","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=3XQGG8202662765307"}
+2026-06-27 18:53:09.041 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=RBH2HBOPO6G8TEGF58CY | txnRefId=3XQGG8202662765307
+2026-06-27 18:53:09.244 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=31
+2026-06-27 18:53:09.244 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=RBH2HBOPO6G8TEGF58CY)...
+2026-06-27 18:53:16.686 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=RBH2HBOPO6G8TEGF58CY
+2026-06-27 18:53:16.855 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=31
+2026-06-27 18:53:17.324 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 18:53:17.351 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=RBH2HBOPO6G8TEGF58CY
+2026-06-27 18:53:18.079 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3XQGG8202662765307","utr":"","orderId":"RBH2HBOPO6G8TEGF58CY","amount":100}
+2026-06-27 18:53:18.079 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3XQGG8202662765307 | utr= | amount=100
+2026-06-27 18:53:18.079 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=RBH2HBOPO6G8TEGF58CY | status=INITIATED
+2026-06-27 18:53:18.079 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 18:53:43.297 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=RBH2HBOPO6G8TEGF58CY
+2026-06-27 18:53:44.134 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3XQGG8202662765307","utr":"","orderId":"RBH2HBOPO6G8TEGF58CY","amount":100}
+2026-06-27 18:53:44.135 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3XQGG8202662765307 | utr= | amount=100
+2026-06-27 18:53:44.135 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=RBH2HBOPO6G8TEGF58CY | status=INITIATED
+2026-06-27 18:53:44.136 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 18:54:09.340 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=RBH2HBOPO6G8TEGF58CY
+2026-06-27 18:54:10.053 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"3XQGG8202662765307","utr":"","orderId":"RBH2HBOPO6G8TEGF58CY","amount":100}
+2026-06-27 18:54:10.053 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=3XQGG8202662765307 | utr= | amount=100
+2026-06-27 18:54:10.054 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=RBH2HBOPO6G8TEGF58CY | status=INITIATED
+2026-06-27 18:54:10.238 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=RBH2HBOPO6G8TEGF58CY | finalStatus=INITIATED
+2026-06-27 18:54:10.242 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 18:54:10.253 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 18:55:19.151 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 18:55:19.154 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 18:55:20.275 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale update(s). Next offset = 124355479
+2026-06-27 18:55:20.286 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver started — listening on port 8089
+2026-06-27 18:55:20.287 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL: http://localhost:8089/payin/callback
+2026-06-27 18:55:20.314 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=9FLC5BCR7DB5Y7RR56RT
+2026-06-27 18:55:23.497 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"9FLC5BCR7DB5Y7RR56RT","txnRefId":"JCFR5K202662765521","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=JCFR5K202662765521"}
+2026-06-27 18:55:23.502 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=9FLC5BCR7DB5Y7RR56RT | txnRefId=JCFR5K202662765521
+2026-06-27 18:55:23.697 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=32
+2026-06-27 18:55:23.698 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=9FLC5BCR7DB5Y7RR56RT)...
+2026-06-27 18:58:05.154 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=9FLC5BCR7DB5Y7RR56RT
+2026-06-27 18:58:05.396 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=32
+2026-06-27 18:58:05.818 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 18:58:05.826 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=9FLC5BCR7DB5Y7RR56RT
+2026-06-27 18:58:06.653 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"JCFR5K202662765521","utr":"775234370412","orderId":"9FLC5BCR7DB5Y7RR56RT","amount":100}
+2026-06-27 18:58:06.654 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=JCFR5K202662765521 | utr=775234370412 | amount=100
+2026-06-27 18:58:06.655 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=9FLC5BCR7DB5Y7RR56RT | status=SUCCESS
+2026-06-27 18:58:06.931 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback on /payin/callback...
+2026-06-27 19:01:44.027 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 19:01:44.030 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 19:01:45.432 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 19:01:45.451 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver started — listening on 0:0:0:0:0:0:0:0:8089 (path=/payin/callback)
+2026-06-27 19:01:45.452 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL: http://localhost:8089/payin/callback
+2026-06-27 19:01:45.530 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=LJ4R1RNKKGG25O7RIR3M
+2026-06-27 19:01:48.391 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"LJ4R1RNKKGG25O7RIR3M","txnRefId":"PI1VXQ202662770147","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=PI1VXQ202662770147"}
+2026-06-27 19:01:48.392 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=LJ4R1RNKKGG25O7RIR3M | txnRefId=PI1VXQ202662770147
+2026-06-27 19:01:48.571 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=33
+2026-06-27 19:01:48.571 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=LJ4R1RNKKGG25O7RIR3M)...
+2026-06-27 19:03:42.222 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=LJ4R1RNKKGG25O7RIR3M
+2026-06-27 19:03:42.410 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=33
+2026-06-27 19:03:42.702 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 19:03:42.760 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=LJ4R1RNKKGG25O7RIR3M
+2026-06-27 19:03:43.689 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"PI1VXQ202662770147","utr":"775234370412","orderId":"LJ4R1RNKKGG25O7RIR3M","amount":100}
+2026-06-27 19:03:43.690 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=PI1VXQ202662770147 | utr=775234370412 | amount=100
+2026-06-27 19:03:43.690 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=LJ4R1RNKKGG25O7RIR3M | status=SUCCESS
+2026-06-27 19:03:43.867 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback on /payin/callback...
+2026-06-27 19:04:44.341 WARN  [c.p.p.t.PayinTelegramFlowTest] Status SUCCESS but no callback received | orderId=LJ4R1RNKKGG25O7RIR3M
+2026-06-27 19:04:44.348 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 19:04:44.352 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 19:11:13.399 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 19:11:13.402 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 19:11:14.515 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 19:11:14.519 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (configure with provider): https://chikkitinytots-bc.onrender.com/payin/callback
+2026-06-27 19:11:14.562 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=12PNY6PRBTR6KDFALYAT
+2026-06-27 19:11:17.349 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"12PNY6PRBTR6KDFALYAT","txnRefId":"LVSJPH202662771116","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=LVSJPH202662771116"}
+2026-06-27 19:11:17.351 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=12PNY6PRBTR6KDFALYAT | txnRefId=LVSJPH202662771116
+2026-06-27 19:11:17.523 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=34
+2026-06-27 19:11:17.524 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=12PNY6PRBTR6KDFALYAT)...
+2026-06-27 19:11:36.601 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=12PNY6PRBTR6KDFALYAT
+2026-06-27 19:11:36.847 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=34
+2026-06-27 19:11:37.227 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 19:11:37.248 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=12PNY6PRBTR6KDFALYAT
+2026-06-27 19:11:37.930 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"LVSJPH202662771116","utr":"775234370412","orderId":"12PNY6PRBTR6KDFALYAT","amount":100}
+2026-06-27 19:11:37.931 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=LVSJPH202662771116 | utr=775234370412 | amount=100
+2026-06-27 19:11:37.931 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=12PNY6PRBTR6KDFALYAT | status=SUCCESS
+2026-06-27 19:11:38.140 INFO  [c.p.p.u.ExternalCallbackChecker] Polling for callback | url=https://chikkitinytots-bc.onrender.com/payin/callback/12PNY6PRBTR6KDFALYAT | timeout=60s | interval=5s
+2026-06-27 19:11:39.096 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/12PNY6PRBTR6KDFALYAT"}
+2026-06-27 19:11:44.381 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/12PNY6PRBTR6KDFALYAT"}
+2026-06-27 19:11:50.804 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 19:11:50.807 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 19:11:50.944 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 19:11:50.946 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 19:11:51.800 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale update(s). Next offset = 124355482
+2026-06-27 19:11:51.803 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (configure with provider): https://chikkitinytots-bc.onrender.com/payin/callback
+2026-06-27 19:11:51.829 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=6M723A6FTEER9F3O5LI1
+2026-06-27 19:11:54.924 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale update(s). Next offset = 124355482
+2026-06-27 19:11:54.931 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (configure with provider): https://chikkitinytots-bc.onrender.com/payin/callback
+2026-06-27 19:11:55.124 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=T25GN5EOYMFP6TR5TMTT
+2026-06-27 19:11:55.585 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"6M723A6FTEER9F3O5LI1","txnRefId":"8CG10H202662771153","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=8CG10H202662771153"}
+2026-06-27 19:11:55.587 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=6M723A6FTEER9F3O5LI1 | txnRefId=8CG10H202662771153
+2026-06-27 19:11:55.826 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=35
+2026-06-27 19:11:55.827 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=6M723A6FTEER9F3O5LI1)...
+2026-06-27 19:12:00.588 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"T25GN5EOYMFP6TR5TMTT","txnRefId":"79HRDC202662771158","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=79HRDC202662771158"}
+2026-06-27 19:12:00.593 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=T25GN5EOYMFP6TR5TMTT | txnRefId=79HRDC202662771158
+2026-06-27 19:12:00.768 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=36
+2026-06-27 19:12:00.769 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=T25GN5EOYMFP6TR5TMTT)...
+2026-06-27 19:12:00.896 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 19:12:21.762 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=T25GN5EOYMFP6TR5TMTT
+2026-06-27 19:12:21.929 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=36
+2026-06-27 19:12:22.435 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 19:12:22.439 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=T25GN5EOYMFP6TR5TMTT
+2026-06-27 19:12:23.121 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"79HRDC202662771158","utr":"","orderId":"T25GN5EOYMFP6TR5TMTT","amount":100}
+2026-06-27 19:12:23.123 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | txnRefId=79HRDC202662771158 | utr= | amount=100
+2026-06-27 19:12:23.123 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=T25GN5EOYMFP6TR5TMTT | status=INITIATED
+2026-06-27 19:12:23.123 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 19:12:37.118 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 19:12:37.121 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 19:12:38.723 INFO  [c.p.p.utils.TelegramNotifier] Flushed 2 stale update(s). Next offset = 124355484
+2026-06-27 19:12:38.727 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (configure with provider): https://chikkitinytots-bc.onrender.com/payin/callback
+2026-06-27 19:12:38.767 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=FL5GLJ8FTPY5YIG51HF9
+2026-06-27 19:12:44.001 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"FL5GLJ8FTPY5YIG51HF9","txnRefId":"TIBRH8202662771242","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=TIBRH8202662771242"}
+2026-06-27 19:12:44.006 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=FL5GLJ8FTPY5YIG51HF9 | txnRefId=TIBRH8202662771242
+2026-06-27 19:12:44.189 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=37
+2026-06-27 19:12:44.189 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=FL5GLJ8FTPY5YIG51HF9)...
+2026-06-27 19:13:43.050 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=FL5GLJ8FTPY5YIG51HF9
+2026-06-27 19:13:43.343 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=37
+2026-06-27 19:13:43.705 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 19:13:43.728 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=FL5GLJ8FTPY5YIG51HF9
+2026-06-27 19:13:44.968 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"TIBRH8202662771242","utr":"775234370412","orderId":"FL5GLJ8FTPY5YIG51HF9","amount":100}
+2026-06-27 19:13:44.970 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=TIBRH8202662771242 | utr=775234370412 | amount=100
+2026-06-27 19:13:44.970 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=FL5GLJ8FTPY5YIG51HF9 | status=SUCCESS
+2026-06-27 19:13:45.185 INFO  [c.p.p.u.ExternalCallbackChecker] Polling for callback | url=https://chikkitinytots-bc.onrender.com/payin/callback/FL5GLJ8FTPY5YIG51HF9 | timeout=60s | interval=5s
+2026-06-27 19:13:46.211 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:13:51.628 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:13:56.911 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:02.293 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:07.583 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:12.869 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:18.167 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:23.433 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:28.710 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:34.026 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:39.348 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:44.631 DEBUG [c.p.p.u.ExternalCallbackChecker] Poll response | status=404 | body={"message":"Route not found: GET /payin/callback/FL5GLJ8FTPY5YIG51HF9"}
+2026-06-27 19:14:45.186 WARN  [c.p.p.u.ExternalCallbackChecker] No callback received for orderId=FL5GLJ8FTPY5YIG51HF9 after 60s
+2026-06-27 19:14:45.653 WARN  [c.p.p.t.PayinTelegramFlowTest] Status SUCCESS but no callback received | orderId=FL5GLJ8FTPY5YIG51HF9
+2026-06-27 19:14:45.654 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 20:37:40.308 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 20:37:40.313 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 20:37:41.193 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 20:37:41.203 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver started — listening on 0:0:0:0:0:0:0:0:8089 (path=/payin/callback)
+2026-06-27 20:37:41.203 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (register this with the provider): https://exert-crisped-related.ngrok-free.dev/payin/callback
+2026-06-27 20:37:41.232 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=J7TA4MEH8D6L8O6A6NNI
+2026-06-27 20:37:43.354 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"J7TA4MEH8D6L8O6A6NNI","txnRefId":"6ZTQQ2202662783742","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=6ZTQQ2202662783742"}
+2026-06-27 20:37:43.355 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=J7TA4MEH8D6L8O6A6NNI | txnRefId=6ZTQQ2202662783742
+2026-06-27 20:37:43.526 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=38
+2026-06-27 20:37:43.526 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=J7TA4MEH8D6L8O6A6NNI)...
+2026-06-27 20:39:00.165 INFO  [c.p.p.utils.CallbackReceiver] Provider callback received:
+{"encryptedData":"TcKxZXUlntJmxnQNfrt1BFtXgnGPferuHMD3jb37V08zLQx0rzYFVCreDLlHUVO/OZ86g9gl1Ivo8aFJdNZbxzYNb3z5bvEPu+zogryl6pn4yRhwWdyoI+RG1N6nEVSnkiAdqVyZd5V/bPQI5fxAqaT0yIU25MoOI/RUntNB4l5fC54PrfGYeUhjb1vA5JngPLOTuNRVjeyiL7tJHIkwecpgNasmJFfOhZzmurEyaQo="}
+2026-06-27 20:39:21.273 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=J7TA4MEH8D6L8O6A6NNI
+2026-06-27 20:39:21.437 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=38
+2026-06-27 20:39:21.749 INFO  [c.p.p.t.PayinTelegramFlowTest] 'Paid' by payshack. Running status check.
+2026-06-27 20:39:21.752 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=J7TA4MEH8D6L8O6A6NNI
+2026-06-27 20:39:22.324 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"6ZTQQ2202662783742","utr":"775234370412","orderId":"J7TA4MEH8D6L8O6A6NNI","amount":100}
+2026-06-27 20:39:22.325 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | txnRefId=6ZTQQ2202662783742 | utr=775234370412 | amount=100
+2026-06-27 20:39:22.325 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=J7TA4MEH8D6L8O6A6NNI | status=SUCCESS
+2026-06-27 20:39:22.550 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback on /payin/callback...
+2026-06-27 20:39:22.728 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED + callback received | orderId=J7TA4MEH8D6L8O6A6NNI
+2026-06-27 20:39:22.729 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 20:39:22.729 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 20:48:25.920 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 20:48:25.924 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 20:48:26.745 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 20:48:26.755 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver listening on port 8089 at /payin/callback
+2026-06-27 20:48:26.755 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (register with provider): https://exert-crisped-related.ngrok-free.dev/payin/callback
+2026-06-27 20:48:26.780 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=6LALOLLG7B6RN32EKEF3
+2026-06-27 20:48:28.873 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"6LALOLLG7B6RN32EKEF3","txnRefId":"IAQD4R202662784828","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=IAQD4R202662784828"}
+2026-06-27 20:48:28.874 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=6LALOLLG7B6RN32EKEF3 | txnRefId=IAQD4R202662784828
+2026-06-27 20:48:29.034 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=39
+2026-06-27 20:48:29.034 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=6LALOLLG7B6RN32EKEF3)...
+2026-06-27 20:48:49.269 INFO  [c.p.p.utils.CallbackReceiver] Provider callback received:
+{"encryptedData":"b5HoQekpHw7YEJg7cwJ9GzAH4cO2gpGo1hQKuLxOqyZDvhn1EjnKEz0pfl9kScumLjZ14B3JYDq9JfQYbk91NOJEZ7cZhlm5dyHqQpP5ThJcm0ZbgfZJghh/9c0gqTFW5pGvqXtXpWrp/OnPsO744w3DeG3gVwZWQwt8FMbABzOvzOX/HDvWJwOwRSNdc1MJzOA7ztueZQcmjjQ5ggeov9vTeI8mM09uBmfTOQZ0870="}
+2026-06-27 20:48:52.174 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=6LALOLLG7B6RN32EKEF3
+2026-06-27 20:48:52.329 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=39
+2026-06-27 20:48:52.620 INFO  [c.p.p.t.PayinTelegramFlowTest] Paid by payshack. Running status check.
+2026-06-27 20:48:52.624 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=6LALOLLG7B6RN32EKEF3
+2026-06-27 20:48:53.188 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"IAQD4R202662784828","utr":"775234370412","orderId":"6LALOLLG7B6RN32EKEF3","amount":100}
+2026-06-27 20:48:53.188 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | utr=775234370412 | amount=100
+2026-06-27 20:48:53.188 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=6LALOLLG7B6RN32EKEF3 | status=SUCCESS
+2026-06-27 20:48:53.351 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback...
+2026-06-27 20:48:53.513 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED + callback received | orderId=6LALOLLG7B6RN32EKEF3
+2026-06-27 20:48:53.515 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 20:48:53.516 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 20:51:25.636 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 20:51:25.642 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 20:51:26.504 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 20:51:26.517 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver listening on port 8089 at /payin/callback
+2026-06-27 20:51:26.517 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (register with provider): https://exert-crisped-related.ngrok-free.dev/payin/callback
+2026-06-27 20:51:26.547 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=A6EPTGRNBH6RPKE177GE
+2026-06-27 20:51:28.584 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"A6EPTGRNBH6RPKE177GE","txnRefId":"1ZNWGN202662785127","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=1ZNWGN202662785127"}
+2026-06-27 20:51:28.588 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=A6EPTGRNBH6RPKE177GE | txnRefId=1ZNWGN202662785127
+2026-06-27 20:51:28.758 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=40
+2026-06-27 20:51:28.758 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=A6EPTGRNBH6RPKE177GE)...
+2026-06-27 20:51:46.210 INFO  [c.p.p.utils.TelegramNotifier] 'Not Now' clicked by payshack for orderId=A6EPTGRNBH6RPKE177GE
+2026-06-27 20:51:46.377 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=40
+2026-06-27 20:51:46.686 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 120s for user to reply with number of minutes...
+2026-06-27 20:51:51.989 INFO  [c.p.p.utils.TelegramNotifier] User replied with 1 minute(s)
+2026-06-27 20:51:52.189 INFO  [c.p.p.t.PayinTelegramFlowTest] Not Now by payshack. Sleeping 1 min until 08:52 PM, 27 Jun 2026
+2026-06-27 20:52:52.198 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=6JJMAFFFK8F3FRBEL7B1
+2026-06-27 20:52:52.783 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"6JJMAFFFK8F3FRBEL7B1","txnRefId":"RPQOPA202662785252","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=RPQOPA202662785252"}
+2026-06-27 20:52:52.783 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=6JJMAFFFK8F3FRBEL7B1 | txnRefId=RPQOPA202662785252
+2026-06-27 20:52:53.202 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=42
+2026-06-27 20:52:53.202 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=6JJMAFFFK8F3FRBEL7B1)...
+2026-06-27 20:53:07.299 INFO  [c.p.p.utils.CallbackReceiver] Provider callback received:
+{"encryptedData":"76Ez2v0+vjF1quHTuIPi/nq6UrJc5KaCnYdgcVzgm5h964Vidaws8tasz9unJCMywazsMai+x/uBR5GksT1uQ7KC+uKyPEQo6Sg3mDVrU/mFAStnVvaqrCEMXp5BZdFlZrcic9VUIIDEBG2R8xNHP2oUcRHOqIUP0K7ltxML6x63RLWzXnwijiFNQCoMAJKNJ8lQt/YnEBTBx2S66daZbLQM5G7MP872ID14zE4lG3Y="}
+2026-06-27 20:53:25.892 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=6JJMAFFFK8F3FRBEL7B1
+2026-06-27 20:53:26.062 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=42
+2026-06-27 20:53:26.347 INFO  [c.p.p.t.PayinTelegramFlowTest] Paid by payshack. Running status check.
+2026-06-27 20:53:26.353 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=6JJMAFFFK8F3FRBEL7B1
+2026-06-27 20:53:26.993 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"RPQOPA202662785252","utr":"775234370412","orderId":"6JJMAFFFK8F3FRBEL7B1","amount":100}
+2026-06-27 20:53:26.993 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | utr=775234370412 | amount=100
+2026-06-27 20:53:26.994 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=6JJMAFFFK8F3FRBEL7B1 | status=SUCCESS
+2026-06-27 20:53:27.242 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback...
+2026-06-27 20:53:27.414 INFO  [c.p.p.t.PayinTelegramFlowTest] Test PASSED + callback received | orderId=6JJMAFFFK8F3FRBEL7B1
+2026-06-27 20:53:27.416 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 20:53:27.418 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 20:54:00.257 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 20:54:00.259 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 20:54:01.972 INFO  [c.p.p.utils.TelegramNotifier] Flushed 1 stale update(s). Next offset = 124355490
+2026-06-27 20:54:02.004 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver listening on port 8089 at /payin/callback
+2026-06-27 20:54:02.004 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (register with provider): https://exert-crisped-related.ngrok-free.dev/payin/callback
+2026-06-27 20:54:02.067 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=E2KFOEF815E156CEA7BA
+2026-06-27 20:54:04.378 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"E2KFOEF815E156CEA7BA","txnRefId":"Q4G8YU202662785403","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=Q4G8YU202662785403"}
+2026-06-27 20:54:04.380 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=E2KFOEF815E156CEA7BA | txnRefId=Q4G8YU202662785403
+2026-06-27 20:54:04.536 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=43
+2026-06-27 20:54:04.537 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=E2KFOEF815E156CEA7BA)...
+2026-06-27 20:54:08.414 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=E2KFOEF815E156CEA7BA
+2026-06-27 20:54:08.606 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=43
+2026-06-27 20:54:08.992 INFO  [c.p.p.t.PayinTelegramFlowTest] Paid by payshack. Running status check.
+2026-06-27 20:54:08.996 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=E2KFOEF815E156CEA7BA
+2026-06-27 20:54:09.632 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"Q4G8YU202662785403","utr":"","orderId":"E2KFOEF815E156CEA7BA","amount":100}
+2026-06-27 20:54:09.633 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | utr= | amount=100
+2026-06-27 20:54:09.633 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=E2KFOEF815E156CEA7BA | status=INITIATED
+2026-06-27 20:54:09.793 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 1/2...
+2026-06-27 20:54:34.807 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=E2KFOEF815E156CEA7BA
+2026-06-27 20:54:35.412 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"Q4G8YU202662785403","utr":"","orderId":"E2KFOEF815E156CEA7BA","amount":100}
+2026-06-27 20:54:35.414 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | utr= | amount=100
+2026-06-27 20:54:35.414 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 2 | orderId=E2KFOEF815E156CEA7BA | status=INITIATED
+2026-06-27 20:54:35.578 INFO  [c.p.p.t.PayinTelegramFlowTest] INITIATED. Waiting 25s before retry 2/2...
+2026-06-27 20:55:00.589 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=E2KFOEF815E156CEA7BA
+2026-06-27 20:55:01.212 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"INITIATED","txnRefId":"Q4G8YU202662785403","utr":"","orderId":"E2KFOEF815E156CEA7BA","amount":100}
+2026-06-27 20:55:01.213 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=INITIATED | utr= | amount=100
+2026-06-27 20:55:01.213 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 3 | orderId=E2KFOEF815E156CEA7BA | status=INITIATED
+2026-06-27 20:55:01.396 ERROR [c.p.p.t.PayinTelegramFlowTest] Test FAILED | orderId=E2KFOEF815E156CEA7BA | status=INITIATED
+2026-06-27 20:55:01.400 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 20:55:01.403 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
+2026-06-27 22:57:54.394 INFO  [c.p.payin.utils.ConfigReader] Loaded config: config/config.properties (env=dev)
+2026-06-27 22:57:54.406 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Starting: PayinTelegramFlowTest ---
+2026-06-27 22:57:55.648 INFO  [c.p.p.utils.TelegramNotifier] No pending Telegram updates to flush.
+2026-06-27 22:57:55.683 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver listening on port 8089 at /payin/callback
+2026-06-27 22:57:55.683 INFO  [c.p.p.t.PayinTelegramFlowTest] Callback URL (register with provider): https://exert-crisped-related.ngrok-free.dev/payin/callback
+2026-06-27 22:57:55.726 INFO  [c.p.payin.api.PayinApiService] POST /payshack-payin/api/v1/payin/ext/txn/initiate-intent | orderId=562YRRFYY55HYFT6H5BR
+2026-06-27 22:57:58.436 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"orderId":"562YRRFYY55HYFT6H5BR","txnRefId":"YJFORW2026627105757","paymentUrl":"upi://pay?pa=malnadmartpneau@topay&pn=ELEGANCECART%20TECHNOLOGY%20PRIVATE%20LIMITED&am=100.00&cu=INR&tr=YJFORW2026627105757"}
+2026-06-27 22:57:58.443 INFO  [c.p.p.t.PayinTelegramFlowTest] Intent initiated | orderId=562YRRFYY55HYFT6H5BR | txnRefId=YJFORW2026627105757
+2026-06-27 22:57:58.670 INFO  [c.p.p.utils.TelegramNotifier] Payment message sent, message_id=44
+2026-06-27 22:57:58.670 INFO  [c.p.p.utils.TelegramNotifier] Waiting up to 300s for button click (orderId=562YRRFYY55HYFT6H5BR)...
+2026-06-27 22:58:32.987 INFO  [c.p.p.utils.TelegramNotifier] 'Paid' clicked by payshack for orderId=562YRRFYY55HYFT6H5BR
+2026-06-27 22:58:33.235 INFO  [c.p.p.utils.TelegramNotifier] Inline keyboard removed from message_id=44
+2026-06-27 22:58:33.573 INFO  [c.p.p.t.PayinTelegramFlowTest] Paid by payshack. Running status check.
+2026-06-27 22:58:33.596 INFO  [c.p.payin.api.PayinApiService] POST /indigate-payin-svc/api/v1/payin/ext/txn/status | orderId=562YRRFYY55HYFT6H5BR
+2026-06-27 22:58:34.443 DEBUG [c.p.payin.api.PayinApiService] Decrypted response: {"status":"SUCCESS","txnRefId":"YJFORW2026627105757","utr":"775234370412","orderId":"562YRRFYY55HYFT6H5BR","amount":100}
+2026-06-27 22:58:34.444 INFO  [c.p.p.t.PayinTelegramFlowTest] Status=SUCCESS | utr=775234370412 | amount=100
+2026-06-27 22:58:34.445 INFO  [c.p.p.t.PayinTelegramFlowTest] Status check 1 | orderId=562YRRFYY55HYFT6H5BR | status=SUCCESS
+2026-06-27 22:58:34.909 INFO  [c.p.p.utils.CallbackReceiver] Waiting up to 60s for provider callback...
+2026-06-27 22:59:35.506 WARN  [c.p.p.t.PayinTelegramFlowTest] SUCCESS but no callback received | orderId=562YRRFYY55HYFT6H5BR
+2026-06-27 22:59:35.528 INFO  [c.p.p.utils.CallbackReceiver] Callback receiver stopped.
+2026-06-27 22:59:35.529 INFO  [c.p.p.t.PayinTelegramFlowTest] --- Finished: PayinTelegramFlowTest ---
